@@ -1,5 +1,7 @@
 # Como Desplegar una Aplicación Web en [iaas.ull.es](iaas.ull.es)
 
+* Véase [este documento como HTML](https://sytw.github.io/iaas.ull.es/index.html)
+
 * Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf). 
 
 * En principio se dispone de una máquina por alumno
