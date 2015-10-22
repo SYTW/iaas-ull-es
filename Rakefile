@@ -1,6 +1,6 @@
 desc "Generar HTML (Instale pandoc)"
 task :default do
-  sh "pandoc -s README.md -o README.html"
+  sh "pandoc -s README.md -o index.html"
 end
 
 desc "Generar LaTeX (Instale pandoc)"

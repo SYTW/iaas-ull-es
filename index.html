@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="iaas.ull.es" class="uri">iaas.ull.es</a></h1>
+<ul>
+<li><p>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">&quot;Manual de administración de Pools de máquinas&quot;</a>.</p></li>
+<li><p>En principio se dispone de una máquina por alumno</p></li>
+<li><p>Se han configurado con el visor VNC (recuerde poner la opción <code>noVNC</code> en las opciones de la cónsola)</p></li>
+</ul>
+<div class="figure">
+<img src="novncconsoleoptions.png" alt="Opciones de la Consola" /><p class="caption">Opciones de la Consola</p>
+</div>
+<ul>
+<li><p>Las máquinas comparten el &quot;tag&quot; <code>SISTECWEB</code> para identificarlas</p></li>
+<li><p>Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una</p></li>
+<li><p>Está instalado <code>git</code>, una versión de <code>node</code></p>
+<pre><code>          usuario@SYTW:~$ git --version
+          git version 1.9.1</code></pre></li>
+<li><p>Está instalado <code>nodejs</code>. Recuerde que es Linux Ubuntu: <code>node</code> no es <code>nodejs</code>:</p>
+<pre><code>    usuario@SYTW:~$ node --version
+    El programa «node» puede encontrarse en los siguientes paquetes:
+     * node
+     * nodejs-legacy
+    Intente: sudo apt-get install &lt;paquete seleccionado&gt;
+
+    usuario@SYTW:~$ nodejs --version
+    v0.10.25</code></pre></li>
+<li><p>y está instalada una versión vieja de <code>ruby</code>.</p>
+<pre><code>        usuario@SYTW:~$ ruby --version
+        ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]</code></pre></li>
+<li><p>Tampoco <code>rvm</code>:</p>
+<pre><code>          usuario@SYTW:~$ rvm --version
+          No se ha encontrado la orden «rvm» pero hay 20 similares</code></pre></li>
+<li><p>No está nada más.</p>
+<pre><code>          usuario@SYTW:~$ nvm --version
+          No se ha encontrado la orden «nvm»</code></pre></li>
+<li><p>Tampoco está <code>npm</code>:</p>
+<pre><code>            usuario@SYTW:~$ npm --version
+            El programa «npm» no está instalado. Puede instalarlo escribiendo:
+            sudo apt-get install npm</code></pre></li>
+<li><p>instale <code>npm</code> y si lo desea <code>nvm</code></p></li>
+<li><p>Las credenciales son <code>usuario/usuario</code>, se les forzará a cambiar la contraseña ante el primer login.</p></li>
+<li><p>Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)</p></li>
+<li><p>Los usuarios tienen disponibilidad para hacer SSH a las máquinas,</p>
+<ol style="list-style-type: decimal">
+<li>dentro de la ULL entrando previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a> y</li>
+<li>desde fuera usando la VPN</li>
+</ol></li>
+</ul>
+<h2 id="vpn-ull">VPN ULL</h2>
+<p><a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
+<h2 id="poniendo-a-funcionar-una-aplicación-web-nodejs">Poniendo a Funcionar una Aplicación Web NodeJS</h2>
+<ul>
+<li><p>Averigue la IP de la máquina para poder usar <code>ssh</code></p>
+<pre><code>        usuario@SYTW:~/src/sytw$ ifconfig
+        eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+                  Direc. inet:55.5.555.55 </code></pre></li>
+<li><p>Instale <code>npm</code></p>
+<pre><code>      usuario@SYTW:~/src/sytw/express-start/hello$ sudo apt-get install npm</code></pre></li>
+</ul>
+<p>o mejor aún use <code>nvm</code></p>
+<ul>
+<li><p>Recuerde poner sus claves privadas de GitHub en <code>.ssh</code> para poder trabajar con sus repos</p></li>
+<li><p>Actualice <code>~/.ssh/config</code> de manera apropiada:</p>
+<pre><code>    usuario@SYTW:~/src/sytw$ cat ~/.ssh/config 
+    Host github.com
+    HostName github.com
+    user git
+    IdentityFile /home/usuario/.ssh/miclaveparagithub</code></pre></li>
+<li><p>Cree un directorio de trabajo:</p>
+<pre><code>  usuario@SYTW:~$ mkdir src
+  usuario@SYTW:~$ cd src
+  usuario@SYTW:~/src$ mkdir sytw
+  usuario@SYTW:~/src$ cd sytw/</code></pre></li>
+<li><p>Clone un repo con una aplicación Web de prueba. Por ejemplo <a href="https://github.com/crguezl/express-start">crguezl/express-start</a>:</p>
+<pre><code>  usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
+  Clonar en «express-start»...
+  Warning: Permanently added the RSA host key for IP address &#39;555.55.555.555&#39; 
+           to the list of known hosts.
+  remote: Counting objects: 87, done.
+  remote: Total 87 (delta 0), reused 0 (delta 0), pack-reused 87
+  Receiving objects: 100% (87/87), 66.93 KiB | 0 bytes/s, done.
+  Resolving deltas: 100% (41/41), done.
+  Checking connectivity... hecho.</code></pre></li>
+<li><p>Este es el contenido de la aplicación de ejemplo <a href="https://github.com/crguezl/express-start/blob/master/hello/hello.js">hello.js</a>:</p>
+<pre><code>    usuario@SYTW:~/src/sytw/express-start$ cd hello/
+
+    usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
+    usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
+
+    usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
+    var express = require(&#39;express&#39;)
+    var app = express()
+    var path = require(&#39;path&#39;);
+
+    // view engine setup
+    app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));
+    app.set(&#39;view engine&#39;, &#39;ejs&#39;);
+
+    app.get(&#39;/&#39;, function (req, res) {
+      //res.send(&#39;Hello World!&#39;)
+      res.render(&#39;index&#39;, { title: &#39;Express&#39; });
+    })
+
+    app.get(&#39;/chuchu&#39;, function (req, res) {
+      //res.send(&#39;Hello Chuchu!&#39;)
+      res.render(&#39;index&#39;, { title: &#39;Chuchu&#39; });
+    })
+
+    var server = app.listen(80, function () {
+
+      var host = server.address().address
+      var port = server.address().port
+
+      console.log(&#39;Example app listening at http://%s:%s&#39;, host, port)
+
+    })</code></pre></li>
+<li><p>Instalamos las dependencias:</p>
+<pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ npm install
+    npm WARN package.json hello@0.0.0 No description
+    npm WARN package.json hello@0.0.0 No repository field.
+    ...</code></pre></li>
+<li><p>Ejecutamos:</p>
+<pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js 
+    sudo: imposible resolver el anfitrión SYTW
+    Example app listening at http://0.0.0.0:80</code></pre></li>
+<li><p>Visitamos la página con el navegador usando la URL con la IP:</p></li>
+</ul>
+<div class="figure">
+<img src="browser.png" alt="Visitando con el navegador la página" /><p class="caption">Visitando con el navegador la página</p>
+</div>
+</body>
+</html>
