@@ -164,3 +164,4 @@ o mejor aún use `nvm`
 
 ![Visitando con el navegador la página](browser.png)
 
+* Creo que ahora mismo sólo están abiertos los puertos  22, 80, 443 y 8080
