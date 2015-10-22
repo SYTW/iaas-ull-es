@@ -1,9 +1,8 @@
 # Como Desplegar una Aplicación Web en [iaas.ull.es](iaas.ull.es)
 
-* Lea el documento ["Manual de administración de Pools de máquinas"](manualdeadministraciondelpooldemauinas.pdf). 
+* Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf). 
 
-* En principio se dispone de una máquina por alumno, pero existe la posibilidad de 
-ampliar el número
+* En principio se dispone de una máquina por alumno
 
 * Se han configurado con el visor VNC (recuerde poner la opción `noVNC` en las 
 opciones de la cónsola)
@@ -16,39 +15,40 @@ opciones de la cónsola)
 
 * Está instalado `git`, una versión de `node` 
 
-    usuario@SYTW:~$ git --version
-    git version 1.9.1
+                  usuario@SYTW:~$ git --version
+                  git version 1.9.1
 
-Recuerde que es Linux Ubuntu: `node` no es  `nodejs`:
+* Está instalado `nodejs`. Recuerde que es Linux Ubuntu: `node` no es  `nodejs`:
 
-    usuario@SYTW:~$ node --version
-    El programa «node» puede encontrarse en los siguientes paquetes:
-     * node
-     * nodejs-legacy
-    Intente: sudo apt-get install <paquete seleccionado>
-    usuario@SYTW:~$ nodejs --version
-    v0.10.25
+            usuario@SYTW:~$ node --version
+            El programa «node» puede encontrarse en los siguientes paquetes:
+             * node
+             * nodejs-legacy
+            Intente: sudo apt-get install <paquete seleccionado>
 
-* y una versión vieja de `ruby`. 
+            usuario@SYTW:~$ nodejs --version
+            v0.10.25
 
-        usuario@SYTW:~$ ruby --version
-        ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
+* y está instalada una versión vieja de `ruby`. 
+
+                usuario@SYTW:~$ ruby --version
+                ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
 
 * Tampoco `rvm`:
 
-      usuario@SYTW:~$ rvm --version
-      No se ha encontrado la orden «rvm» pero hay 20 similares
+                  usuario@SYTW:~$ rvm --version
+                  No se ha encontrado la orden «rvm» pero hay 20 similares
 
 * No está nada más. 
 
-          usuario@SYTW:~$ nvm --version
-          No se ha encontrado la orden «nvm»
+                  usuario@SYTW:~$ nvm --version
+                  No se ha encontrado la orden «nvm»
 
 * Tampoco está `npm`:
 
-          usuario@SYTW:~$ npm --version
-          El programa «npm» no está instalado. Puede instalarlo escribiendo:
-          sudo apt-get install npm
+                    usuario@SYTW:~$ npm --version
+                    El programa «npm» no está instalado. Puede instalarlo escribiendo:
+                    sudo apt-get install npm
 
 * instale `npm` y si lo desea `nvm`
 
@@ -65,7 +65,7 @@ Recuerde que es Linux Ubuntu: `node` no es  `nodejs`:
 
 [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
 
-## Poniendo a Funcionar una Aplicación Web
+## Poniendo a Funcionar una Aplicación Web NodeJS
 
 * Averigue la IP de la máquina para poder usar `ssh`
 
@@ -96,7 +96,7 @@ o mejor aún use `nvm`
           usuario@SYTW:~/src$ mkdir sytw
           usuario@SYTW:~/src$ cd sytw/
 
-* Clone un repo con una aplicación Web de prueba. Por ejemplo:
+* Clone un repo con una aplicación Web de prueba. Por ejemplo [crguezl/express-start](https://github.com/crguezl/express-start):
 
           usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
           Clonar en «express-start»...
@@ -108,7 +108,7 @@ o mejor aún use `nvm`
           Resolving deltas: 100% (41/41), done.
           Checking connectivity... hecho.
 
-* Este es el contenido de la aplicación de ejemplo:
+* Este es el contenido de la aplicación de ejemplo [hello.js](https://github.com/crguezl/express-start/blob/master/hello/hello.js):
 
             usuario@SYTW:~/src/sytw/express-start$ cd hello/
 
