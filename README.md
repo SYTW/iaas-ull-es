@@ -2,6 +2,8 @@
 
 * Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
 
+* Véase el [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
+
 * Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf). 
 
 * En principio se dispone de una máquina por alumno
