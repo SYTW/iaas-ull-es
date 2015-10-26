@@ -2,7 +2,7 @@
 
 * Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
 
-* Véase el [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
+* Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
 
 * Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf). 
 
@@ -164,4 +164,5 @@ o mejor aún use `nvm`
 
 ![Visitando con el navegador la página](browser.png)
 
-* Creo que ahora mismo sólo están abiertos los puertos  22, 80, 443 y 8080
+* Creo que ahora mismo están abiertos los puertos  22, 80, 443 y el rango del 8080
+al 8090
