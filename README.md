@@ -27,6 +27,13 @@ opciones de la cónsola)
                   usuario@SYTW:~$ git --version
                   git version 1.9.1
 
+Si queremos actualizar `git`: 
+```sh
+apt-get update
+apt-get upgrade
+apt-get install git
+```
+
 * Está instalado `nodejs`. Recuerde que es Linux Ubuntu: `node` no es  `nodejs`:
 
             usuario@SYTW:~$ node --version
