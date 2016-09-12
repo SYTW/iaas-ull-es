@@ -1,5 +1,10 @@
 # Como Desplegar una Aplicación Web en [iaas.ull.es](iaas.ull.es)
 
+Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios
+finales) accederán a [https://iaas.ull.es](), donde seleccionarán la opción *Portal del usuario*.
+Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la
+comunidad universitaria
+
 * Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
 
 * Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
