@@ -9,28 +9,26 @@ comunidad universitaria
 
 * Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
 
-* Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf). 
+* Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf).
 
 * En principio se dispone de una máquina por alumno
 
-* Se han configurado con el visor VNC (recuerde poner la opción `noVNC` en las 
+* Se han configurado con el visor VNC (recuerde poner la opción `noVNC` en las
 opciones de la cónsola)
 
 ![Opciones de la Consola](novncconsoleoptions.png)
 
 * Las máquinas comparten el "tag" `SISTECWEB` para identificarlas
 
-* Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una 
+* Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una
 
-* Está instalado `git`, una versión de `node` 
+* Está instalado `git`, una versión de `node`
 
                   usuario@SYTW:~$ git --version
                   git version 1.9.1
 
-Si queremos actualizar `git`: 
+Si queremos actualizar `git`:
 ```sh
-apt-get update
-apt-get upgrade
 apt-get install git
 ```
 
@@ -45,7 +43,7 @@ apt-get install git
             usuario@SYTW:~$ nodejs --version
             v0.10.25
 
-* y está instalada una versión vieja de `ruby`. 
+* y está instalada una versión vieja de `ruby`.
 
                 usuario@SYTW:~$ ruby --version
                 ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
@@ -55,7 +53,7 @@ apt-get install git
                   usuario@SYTW:~$ rvm --version
                   No se ha encontrado la orden «rvm» pero hay 20 similares
 
-* No está nada más. 
+* No está nada más.
 
                   usuario@SYTW:~$ nvm --version
                   No se ha encontrado la orden «nvm»
@@ -68,18 +66,20 @@ apt-get install git
 
 * instale `npm` y si lo desea `nvm`
 
-* Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login. 
+## Acceso por SSH y Credenciales
+
+* Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login.
 
 * Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)
 
-* Los usuarios tienen disponibilidad para hacer SSH a las máquinas, 
+* Los usuarios tienen disponibilidad para hacer SSH a las máquinas,
 
-    1. dentro de la ULL entrando previamente a [https://acceso.ull.es](https://acceso.ull.es) y 
-    2. desde fuera usando la VPN 
+    1. dentro de la ULL **entrando previamente a [https://acceso.ull.es](https://acceso.ull.es)** y
+    2. desde fuera usando la VPN
 
-## VPN ULL
+### VPN ULL
 
-[Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
+Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
 
 ## Poniendo a Funcionar una Aplicación Web NodeJS
 
@@ -87,7 +87,7 @@ apt-get install git
 
                 usuario@SYTW:~/src/sytw$ ifconfig
                 eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-                          Direc. inet:55.5.555.55 
+                          Direc. inet:55.5.555.55
 
 * Instale `npm`
 
@@ -99,7 +99,7 @@ o mejor aún use `nvm`
 
 * Actualice `~/.ssh/config` de manera apropiada:
 
-            usuario@SYTW:~/src/sytw$ cat ~/.ssh/config 
+            usuario@SYTW:~/src/sytw$ cat ~/.ssh/config
             Host github.com
             HostName github.com
             user git
@@ -116,7 +116,7 @@ o mejor aún use `nvm`
 
           usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
           Clonar en «express-start»...
-          Warning: Permanently added the RSA host key for IP address '555.55.555.555' 
+          Warning: Permanently added the RSA host key for IP address '555.55.555.555'
                    to the list of known hosts.
           remote: Counting objects: 87, done.
           remote: Total 87 (delta 0), reused 0 (delta 0), pack-reused 87
@@ -168,7 +168,7 @@ o mejor aún use `nvm`
 
 * Ejecutamos:
 
-            usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js 
+            usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js
             sudo: imposible resolver el anfitrión SYTW
             Example app listening at http://0.0.0.0:80
 
