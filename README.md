@@ -18,7 +18,7 @@ Al pulsar sobre `connect` se abrirá una terminal en el navegador:
 ## Averiguar la IP de la máquina virtual
 
 * La terminal en el navegador no es útil en absoluto.
-* Averigue la IP de la máquina para poder usar `ssh`. En la terminal de su navegador conectado a la máquina escriba:
+* Use la terminal en el navegador para averiguar la IP de la máquina para poder usar `ssh` posteriormente. En la terminal de su navegador conectado a la máquina escriba:
 
 ```bash
 usuario@SYTW:~/src/sytw$ ifconfig
