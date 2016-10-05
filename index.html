@@ -6,6 +6,25 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 </head>
 <body>
 <h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="iaas.ull.es" class="uri">iaas.ull.es</a></h1>
@@ -62,7 +81,7 @@
 <li><p>Los usuarios tienen disponibilidad para hacer SSH a las máquinas,</p>
 <ol style="list-style-type: decimal">
 <li>dentro de la ULL <strong>entrando previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a></strong> y</li>
-<li>desde fuera usando la VPN</li>
+<li>desde fuera de la ULL usando la VPN</li>
 </ol></li>
 </ul>
 <h3 id="vpn-ull">VPN ULL</h3>
@@ -113,35 +132,33 @@
     usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
     usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
 
-    usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
-    ```javascript
-    var express = require(&#39;express&#39;)
-    var app = express()
-    var path = require(&#39;path&#39;);
+    usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">        <span class="kw">var</span> express = <span class="fu">require</span>(<span class="st">&#39;express&#39;</span>)
+        <span class="kw">var</span> app = <span class="fu">express</span>()
+        <span class="kw">var</span> path = <span class="fu">require</span>(<span class="st">&#39;path&#39;</span>);
 
-    // view engine setup
-    app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));
-    app.set(&#39;view engine&#39;, &#39;ejs&#39;);
+        <span class="co">// view engine setup</span>
+        <span class="ot">app</span>.<span class="fu">set</span>(<span class="st">&#39;views&#39;</span>, <span class="ot">path</span>.<span class="fu">join</span>(__dirname, <span class="st">&#39;views&#39;</span>));
+        <span class="ot">app</span>.<span class="fu">set</span>(<span class="st">&#39;view engine&#39;</span>, <span class="st">&#39;ejs&#39;</span>);
 
-    app.get(&#39;/&#39;, function (req, res) {
-      //res.send(&#39;Hello World!&#39;)
-      res.render(&#39;index&#39;, { title: &#39;Express&#39; });
-    })
+        <span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/&#39;</span>, <span class="kw">function</span> (req, res) {
+          <span class="co">//res.send(&#39;Hello World!&#39;)</span>
+          <span class="ot">res</span>.<span class="fu">render</span>(<span class="st">&#39;index&#39;</span>, { <span class="dt">title</span>: <span class="st">&#39;Express&#39;</span> });
+        })
 
-    app.get(&#39;/chuchu&#39;, function (req, res) {
-      //res.send(&#39;Hello Chuchu!&#39;)
-      res.render(&#39;index&#39;, { title: &#39;Chuchu&#39; });
-    })
+        <span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/chuchu&#39;</span>, <span class="kw">function</span> (req, res) {
+          <span class="co">//res.send(&#39;Hello Chuchu!&#39;)</span>
+          <span class="ot">res</span>.<span class="fu">render</span>(<span class="st">&#39;index&#39;</span>, { <span class="dt">title</span>: <span class="st">&#39;Chuchu&#39;</span> });
+        })
 
-    var server = app.listen(80, function () {
+        <span class="kw">var</span> server = <span class="ot">app</span>.<span class="fu">listen</span>(<span class="dv">80</span>, <span class="kw">function</span> () {
 
-      var host = server.address().address
-      var port = server.address().port
+          <span class="kw">var</span> host = <span class="ot">server</span>.<span class="fu">address</span>().<span class="fu">address</span>
+          <span class="kw">var</span> port = <span class="ot">server</span>.<span class="fu">address</span>().<span class="fu">port</span>
 
-      console.log(&#39;Example app listening at http://%s:%s&#39;, host, port)
+          <span class="ot">console</span>.<span class="fu">log</span>(<span class="st">&#39;Example app listening at http://%s:%s&#39;</span>, host, port)
 
-    })
-    ```</code></pre></li>
+        })</code></pre></li>
 </ul>
 <h2 id="instalando-dependencias">Instalando dependencias</h2>
 <ul>

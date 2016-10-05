@@ -76,7 +76,7 @@ apt-get install git
 * Los usuarios tienen disponibilidad para hacer SSH a las máquinas,
 
     1. dentro de la ULL **entrando previamente a [https://acceso.ull.es](https://acceso.ull.es)** y
-    2. desde fuera usando la VPN
+    2. desde fuera de la ULL usando la VPN
 
 ### VPN ULL
 
@@ -139,7 +139,7 @@ o mejor aún use `nvm`
             usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
 
             usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
-            ```javascript
+```javascript
             var express = require('express')
             var app = express()
             var path = require('path');
@@ -166,7 +166,7 @@ o mejor aún use `nvm`
               console.log('Example app listening at http://%s:%s', host, port)
 
             })
-            ```
+```
 
 ## Instalando dependencias
 
