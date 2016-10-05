@@ -43,10 +43,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </div>
 <h2 id="averiguar-la-ip-de-la-máquina-virtual">Averiguar la IP de la máquina virtual</h2>
 <ul>
-<li><p>Averigue la IP de la máquina para poder usar <code>ssh</code>. En la terminal de su navegador conectado a la máquina escriba:</p>
-<pre><code>        usuario@SYTW:~/src/sytw$ ifconfig
-        eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-                  Direc. inet:55.5.555.55</code></pre></li>
+<li>La terminal en el navegador no es útil en absoluto.</li>
+<li>Averigue la IP de la máquina para poder usar <code>ssh</code>. En la terminal de su navegador conectado a la máquina escriba:</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@SYTW</span>:~/src/sytw$ ifconfig
+<span class="kw">eth0</span>      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+          <span class="kw">Direc.</span> inet:55.5.555.55</code></pre>
+<ul>
+<li>A partir de ese momento use <code>ssh</code> para conectarse a su máquina virtual</li>
 </ul>
 <h2 id="acceso-por-ssh-y-credenciales">Acceso por SSH y Credenciales</h2>
 <ul>

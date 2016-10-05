@@ -17,12 +17,16 @@ Al pulsar sobre `connect` se abrirá una terminal en el navegador:
 
 ## Averiguar la IP de la máquina virtual
 
+* La terminal en el navegador no es útil en absoluto.
 * Averigue la IP de la máquina para poder usar `ssh`. En la terminal de su navegador conectado a la máquina escriba:
 
-                usuario@SYTW:~/src/sytw$ ifconfig
-                eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-                          Direc. inet:55.5.555.55
+```bash
+usuario@SYTW:~/src/sytw$ ifconfig
+eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+          Direc. inet:55.5.555.55
+```
 
+* A partir de ese momento use `ssh` para conectarse a su máquina virtual
 
 ## Acceso por SSH y Credenciales
 
