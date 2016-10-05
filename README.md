@@ -191,5 +191,6 @@ o mejor aún use `nvm`
 
 ## Puertos abiertos en las Máquinas Virtuales
 
-* Creo que ahora mismo están abiertos los puertos  22, 80, 443 y el rango del 8080
-al 8090
+* Creo que ahora mismo están abiertos los puertos:
+  -  22, 80, 443 y
+  - el rango del 8080 al 8090
