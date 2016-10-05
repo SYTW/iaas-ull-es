@@ -3,6 +3,15 @@
 Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios
 finales) accederán a [https://iaas.ull.es](https://iaas.ull.es), donde seleccionarán la opción **Portal del usuario**.
 
+## Averiguar la IP de la máquina virtual
+
+* Averigue la IP de la máquina para poder usar `ssh`. En la terminal de su navegador conectado a la máquina escriba:
+
+                usuario@SYTW:~/src/sytw$ ifconfig
+                eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+                          Direc. inet:55.5.555.55
+
+
 ## Acceso por SSH y Credenciales
 
 * Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login.
@@ -17,6 +26,11 @@ finales) accederán a [https://iaas.ull.es](https://iaas.ull.es), donde seleccio
 
 Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la
 comunidad universitaria
+
+## VPN ULL
+
+Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
+
 
 ## Referencias
 
@@ -100,18 +114,6 @@ apt-get install git
                     sudo apt-get install npm
 
 * instale `npm` y si lo desea `nvm`
-
-### VPN ULL
-
-Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
-
-## Averiguar la IP de la máquina virtual
-
-* Averigue la IP de la máquina para poder usar `ssh`. En la terminal de su navegador conectado a la máquina escriba:
-
-                usuario@SYTW:~/src/sytw$ ifconfig
-                eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-                          Direc. inet:55.5.555.55
 
 ## Instalar `npm`
 

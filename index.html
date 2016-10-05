@@ -29,6 +29,13 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <body>
 <h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="https://iaas.ull.es">iaas.ull.es</a></h1>
 <p>Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios finales) accederán a <a href="https://iaas.ull.es" class="uri">https://iaas.ull.es</a>, donde seleccionarán la opción <strong>Portal del usuario</strong>.</p>
+<h2 id="averiguar-la-ip-de-la-máquina-virtual">Averiguar la IP de la máquina virtual</h2>
+<ul>
+<li><p>Averigue la IP de la máquina para poder usar <code>ssh</code>. En la terminal de su navegador conectado a la máquina escriba:</p>
+<pre><code>        usuario@SYTW:~/src/sytw$ ifconfig
+        eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+                  Direc. inet:55.5.555.55</code></pre></li>
+</ul>
 <h2 id="acceso-por-ssh-y-credenciales">Acceso por SSH y Credenciales</h2>
 <ul>
 <li><p>Las credenciales son <code>usuario/usuario</code>, se les forzará a cambiar la contraseña ante el primer login.</p></li>
@@ -40,6 +47,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ol></li>
 </ul>
 <p>Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la comunidad universitaria</p>
+<h2 id="vpn-ull">VPN ULL</h2>
+<p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
 <h2 id="referencias">Referencias</h2>
 <ul>
 <li><p>Véase <a href="https://sytw.github.io/iaas-ull-es/index.html">este documento como HTML</a></p></li>
@@ -99,15 +108,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
             El programa «npm» no está instalado. Puede instalarlo escribiendo:
             sudo apt-get install npm</code></pre></li>
 <li><p>instale <code>npm</code> y si lo desea <code>nvm</code></p></li>
-</ul>
-<h3 id="vpn-ull">VPN ULL</h3>
-<p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
-<h2 id="averiguar-la-ip-de-la-máquina-virtual">Averiguar la IP de la máquina virtual</h2>
-<ul>
-<li><p>Averigue la IP de la máquina para poder usar <code>ssh</code>. En la terminal de su navegador conectado a la máquina escriba:</p>
-<pre><code>        usuario@SYTW:~/src/sytw$ ifconfig
-        eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-                  Direc. inet:55.5.555.55</code></pre></li>
 </ul>
 <h2 id="instalar-npm">Instalar <code>npm</code></h2>
 <ul>
