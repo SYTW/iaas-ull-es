@@ -41,17 +41,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div class="figure">
 <img src="terminalnavegador.png" alt="Terminal en el navegador" /><p class="caption">Terminal en el navegador</p>
 </div>
-<h2 id="averiguar-la-ip-de-la-máquina-virtual">Averiguar la IP de la máquina virtual</h2>
-<ul>
-<li>La terminal en el navegador no es útil en absoluto.</li>
-<li>Use la terminal en el navegador para averiguar la IP de la máquina para poder usar <code>ssh</code> posteriormente. En la terminal de su navegador conectado a la máquina escriba:</li>
-</ul>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@SYTW</span>:~/src/sytw$ ifconfig
-<span class="kw">eth0</span>      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-          <span class="kw">Direc.</span> inet:55.5.555.55</code></pre>
-<ul>
-<li>A partir de ese momento use <code>ssh</code> para conectarse a su máquina virtual</li>
-</ul>
 <h2 id="acceso-por-ssh-y-credenciales">Acceso por SSH y Credenciales</h2>
 <ul>
 <li><p>Las credenciales son <code>usuario/usuario</code>, se les forzará a cambiar la contraseña ante el primer login.</p></li>
@@ -63,6 +52,17 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ol></li>
 </ul>
 <p>Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la comunidad universitaria</p>
+<h2 id="averiguar-la-ip-de-la-máquina-virtual">Averiguar la IP de la máquina virtual</h2>
+<ul>
+<li>La terminal en el navegador no es útil en absoluto.</li>
+<li>Use la terminal en el navegador para averiguar la IP de la máquina para poder usar <code>ssh</code> posteriormente. En la terminal de su navegador conectado a la máquina escriba:</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@SYTW</span>:~/src/sytw$ ifconfig
+<span class="kw">eth0</span>      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+          <span class="kw">Direc.</span> inet:55.5.555.55</code></pre>
+<ul>
+<li>A partir de ese momento use <code>ssh</code> para conectarse a su máquina virtual</li>
+</ul>
 <h2 id="vpn-ull">VPN ULL</h2>
 <p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
 <h2 id="referencias">Referencias</h2>

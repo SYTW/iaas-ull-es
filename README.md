@@ -15,19 +15,6 @@ Al pulsar sobre `connect` se abrirá una terminal en el navegador:
 
 ![Terminal en el navegador](terminalnavegador.png)
 
-## Averiguar la IP de la máquina virtual
-
-* La terminal en el navegador no es útil en absoluto.
-* Use la terminal en el navegador para averiguar la IP de la máquina para poder usar `ssh` posteriormente. En la terminal de su navegador conectado a la máquina escriba:
-
-```bash
-usuario@SYTW:~/src/sytw$ ifconfig
-eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-          Direc. inet:55.5.555.55
-```
-
-* A partir de ese momento use `ssh` para conectarse a su máquina virtual
-
 ## Acceso por SSH y Credenciales
 
 * Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login.
@@ -42,6 +29,20 @@ eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa
 
 Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la
 comunidad universitaria
+
+
+## Averiguar la IP de la máquina virtual
+
+* La terminal en el navegador no es útil en absoluto.
+* Use la terminal en el navegador para averiguar la IP de la máquina para poder usar `ssh` posteriormente. En la terminal de su navegador conectado a la máquina escriba:
+
+```bash
+usuario@SYTW:~/src/sytw$ ifconfig
+eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
+          Direc. inet:55.5.555.55
+```
+
+* A partir de ese momento use `ssh` para conectarse a su máquina virtual
 
 ## VPN ULL
 
