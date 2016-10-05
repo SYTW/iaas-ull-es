@@ -82,19 +82,23 @@ apt-get install git
 
 Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
 
-## Poniendo a Funcionar una Aplicación Web NodeJS
+## Averiguar la IP de la máquina virtual
 
-* Averigue la IP de la máquina para poder usar `ssh`
+* Averigue la IP de la máquina para poder usar `ssh`. En la terminal de su navegador conectado a la máquina escriba:
 
                 usuario@SYTW:~/src/sytw$ ifconfig
                 eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
                           Direc. inet:55.5.555.55
 
-* Instale `npm`
+## Instalar `npm`
+
+* Instale `npm` si no está instalada
 
               usuario@SYTW:~/src/sytw/express-start/hello$ sudo apt-get install npm
 
 o mejor aún use `nvm`
+
+## Configure el cliente ssh para trabajar con GitHub
 
 * Recuerde poner sus claves privadas de GitHub en `.ssh` para poder trabajar con sus repos
 
@@ -105,6 +109,8 @@ o mejor aún use `nvm`
             HostName github.com
             user git
             IdentityFile /home/usuario/.ssh/miclaveparagithub
+
+## Descargando un repo
 
 * Cree un directorio de trabajo:
 
@@ -133,6 +139,7 @@ o mejor aún use `nvm`
             usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
 
             usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
+            ```javascript
             var express = require('express')
             var app = express()
             var path = require('path');
@@ -159,6 +166,9 @@ o mejor aún use `nvm`
               console.log('Example app listening at http://%s:%s', host, port)
 
             })
+            ```
+
+## Instalando dependencias
 
 * Instalamos las dependencias:
 
@@ -166,6 +176,8 @@ o mejor aún use `nvm`
             npm WARN package.json hello@0.0.0 No description
             npm WARN package.json hello@0.0.0 No repository field.
             ...
+
+## Ejecución de un servicio
 
 * Ejecutamos:
 
@@ -176,6 +188,8 @@ o mejor aún use `nvm`
 * Visitamos la página con el navegador usando la URL con la IP:
 
 ![Visitando con el navegador la página](browser.png)
+
+## Puertos abiertos en las Máquinas Virtuales
 
 * Creo que ahora mismo están abiertos los puertos  22, 80, 443 y el rango del 8080
 al 8090

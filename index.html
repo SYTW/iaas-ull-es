@@ -67,16 +67,20 @@
 </ul>
 <h3 id="vpn-ull">VPN ULL</h3>
 <p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
-<h2 id="poniendo-a-funcionar-una-aplicación-web-nodejs">Poniendo a Funcionar una Aplicación Web NodeJS</h2>
+<h2 id="averiguar-la-ip-de-la-máquina-virtual">Averiguar la IP de la máquina virtual</h2>
 <ul>
-<li><p>Averigue la IP de la máquina para poder usar <code>ssh</code></p>
+<li><p>Averigue la IP de la máquina para poder usar <code>ssh</code>. En la terminal de su navegador conectado a la máquina escriba:</p>
 <pre><code>        usuario@SYTW:~/src/sytw$ ifconfig
         eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
                   Direc. inet:55.5.555.55</code></pre></li>
-<li><p>Instale <code>npm</code></p>
+</ul>
+<h2 id="instalar-npm">Instalar <code>npm</code></h2>
+<ul>
+<li><p>Instale <code>npm</code> si no está instalada</p>
 <pre><code>      usuario@SYTW:~/src/sytw/express-start/hello$ sudo apt-get install npm</code></pre></li>
 </ul>
 <p>o mejor aún use <code>nvm</code></p>
+<h2 id="configure-el-cliente-ssh-para-trabajar-con-github">Configure el cliente ssh para trabajar con GitHub</h2>
 <ul>
 <li><p>Recuerde poner sus claves privadas de GitHub en <code>.ssh</code> para poder trabajar con sus repos</p></li>
 <li><p>Actualice <code>~/.ssh/config</code> de manera apropiada:</p>
@@ -85,6 +89,9 @@
     HostName github.com
     user git
     IdentityFile /home/usuario/.ssh/miclaveparagithub</code></pre></li>
+</ul>
+<h2 id="descargando-un-repo">Descargando un repo</h2>
+<ul>
 <li><p>Cree un directorio de trabajo:</p>
 <pre><code>  usuario@SYTW:~$ mkdir src
   usuario@SYTW:~$ cd src
@@ -107,6 +114,7 @@
     usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
 
     usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
+    ```javascript
     var express = require(&#39;express&#39;)
     var app = express()
     var path = require(&#39;path&#39;);
@@ -132,12 +140,19 @@
 
       console.log(&#39;Example app listening at http://%s:%s&#39;, host, port)
 
-    })</code></pre></li>
+    })
+    ```</code></pre></li>
+</ul>
+<h2 id="instalando-dependencias">Instalando dependencias</h2>
+<ul>
 <li><p>Instalamos las dependencias:</p>
 <pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ npm install
     npm WARN package.json hello@0.0.0 No description
     npm WARN package.json hello@0.0.0 No repository field.
     ...</code></pre></li>
+</ul>
+<h2 id="ejecución-de-un-servicio">Ejecución de un servicio</h2>
+<ul>
 <li><p>Ejecutamos:</p>
 <pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js
     sudo: imposible resolver el anfitrión SYTW
@@ -147,6 +162,7 @@
 <div class="figure">
 <img src="browser.png" alt="Visitando con el navegador la página" /><p class="caption">Visitando con el navegador la página</p>
 </div>
+<h2 id="puertos-abiertos-en-las-máquinas-virtuales">Puertos abiertos en las Máquinas Virtuales</h2>
 <ul>
 <li>Creo que ahora mismo están abiertos los puertos 22, 80, 443 y el rango del 8080 al 8090</li>
 </ul>
