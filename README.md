@@ -1,10 +1,24 @@
-# Como Desplegar una Aplicación Web en [iaas.ull.es](iaas.ull.es)
+# Como Desplegar una Aplicación Web en [iaas.ull.es](https://iaas.ull.es)
 
 Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios
 finales) accederán a [https://iaas.ull.es](https://iaas.ull.es), donde seleccionarán la opción **Portal del usuario**.
 
+## Acceso por SSH y Credenciales
+
+* Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login.
+
+* Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)
+
+* Los usuarios tienen disponibilidad para hacer SSH a las máquinas,
+
+    1. dentro de la ULL **entrando previamente a [https://acceso.ull.es](https://acceso.ull.es)** y
+    2. desde fuera de la ULL usando la VPN
+
+
 Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la
 comunidad universitaria
+
+## Referencias
 
 * Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
 
@@ -12,18 +26,28 @@ comunidad universitaria
 
 * Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf).
 
-* En principio se dispone de una máquina por alumno
+## Opciones de Consola
 
 * Se han configurado con el visor VNC (recuerde poner la opción `noVNC` en las
 opciones de la cónsola)
 
 ![Opciones de la Consola](novncconsoleoptions.png)
 
-* Las máquinas comparten el "tag" `SISTECWEB` para identificarlas
 
-* Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una
+
+## Puertos abiertos en las Máquinas Virtuales
+
+* Creo que ahora mismo están abiertos los puertos:
+  -  22, 80, 443 y
+  - el rango del 8080 al 8090
 
 ## Descripción de las máquinas
+
+* En principio se dispone de una máquina por alumno
+* Las máquinas de una misma asignatura comparten el mismo *tag*, por ejemplo  `SISTECWEB` o algo parecido
+* Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una
+
+### Que suele estar instalado
 
 Lo que está instalado en las máquinas depende del tipo de plantilla
 que haya solicitado el profesor para el curso.
@@ -76,17 +100,6 @@ apt-get install git
                     sudo apt-get install npm
 
 * instale `npm` y si lo desea `nvm`
-
-## Acceso por SSH y Credenciales
-
-* Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login.
-
-* Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)
-
-* Los usuarios tienen disponibilidad para hacer SSH a las máquinas,
-
-    1. dentro de la ULL **entrando previamente a [https://acceso.ull.es](https://acceso.ull.es)** y
-    2. desde fuera de la ULL usando la VPN
 
 ### VPN ULL
 
@@ -198,9 +211,3 @@ o mejor aún use `nvm`
 * Visitamos la página con el navegador usando la URL con la IP:
 
 ![Visitando con el navegador la página](browser.png)
-
-## Puertos abiertos en las Máquinas Virtuales
-
-* Creo que ahora mismo están abiertos los puertos:
-  -  22, 80, 443 y
-  - el rango del 8080 al 8090

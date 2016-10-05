@@ -27,24 +27,45 @@ code > span.er { color: #ff0000; font-weight: bold; }
   </style>
 </head>
 <body>
-<h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="iaas.ull.es" class="uri">iaas.ull.es</a></h1>
+<h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="https://iaas.ull.es">iaas.ull.es</a></h1>
 <p>Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios finales) accederán a <a href="https://iaas.ull.es" class="uri">https://iaas.ull.es</a>, donde seleccionarán la opción <strong>Portal del usuario</strong>.</p>
+<h2 id="acceso-por-ssh-y-credenciales">Acceso por SSH y Credenciales</h2>
+<ul>
+<li><p>Las credenciales son <code>usuario/usuario</code>, se les forzará a cambiar la contraseña ante el primer login.</p></li>
+<li><p>Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)</p></li>
+<li><p>Los usuarios tienen disponibilidad para hacer SSH a las máquinas,</p>
+<ol style="list-style-type: decimal">
+<li>dentro de la ULL <strong>entrando previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a></strong> y</li>
+<li>desde fuera de la ULL usando la VPN</li>
+</ol></li>
+</ul>
 <p>Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la comunidad universitaria</p>
+<h2 id="referencias">Referencias</h2>
 <ul>
 <li><p>Véase <a href="https://sytw.github.io/iaas-ull-es/index.html">este documento como HTML</a></p></li>
 <li><p>Véase este <a href="https://github.com/SYTW/iaas-ull-es">repo en GitHub</a></p></li>
 <li><p>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">&quot;Manual de administración de Pools de máquinas&quot;</a>.</p></li>
-<li><p>En principio se dispone de una máquina por alumno</p></li>
-<li><p>Se han configurado con el visor VNC (recuerde poner la opción <code>noVNC</code> en las opciones de la cónsola)</p></li>
+</ul>
+<h2 id="opciones-de-consola">Opciones de Consola</h2>
+<ul>
+<li>Se han configurado con el visor VNC (recuerde poner la opción <code>noVNC</code> en las opciones de la cónsola)</li>
 </ul>
 <div class="figure">
 <img src="novncconsoleoptions.png" alt="Opciones de la Consola" /><p class="caption">Opciones de la Consola</p>
 </div>
+<h2 id="puertos-abiertos-en-las-máquinas-virtuales">Puertos abiertos en las Máquinas Virtuales</h2>
 <ul>
-<li><p>Las máquinas comparten el &quot;tag&quot; <code>SISTECWEB</code> para identificarlas</p></li>
-<li><p>Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una</p></li>
+<li>Creo que ahora mismo están abiertos los puertos:</li>
+<li>22, 80, 443 y</li>
+<li>el rango del 8080 al 8090</li>
 </ul>
 <h2 id="descripción-de-las-máquinas">Descripción de las máquinas</h2>
+<ul>
+<li>En principio se dispone de una máquina por alumno</li>
+<li>Las máquinas de una misma asignatura comparten el mismo <em>tag</em>, por ejemplo <code>SISTECWEB</code> o algo parecido</li>
+<li>Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una</li>
+</ul>
+<h3 id="que-suele-estar-instalado">Que suele estar instalado</h3>
 <p>Lo que está instalado en las máquinas depende del tipo de plantilla que haya solicitado el profesor para el curso. De todos modos, como tenemos permisos de administración no es mucho problema instalar cualquier software que nos falte.</p>
 <p>Lo que sigue es la descripción de una máquina típica correspondiente a una plantilla <em>de servidor</em>.</p>
 <ul>
@@ -78,16 +99,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
             El programa «npm» no está instalado. Puede instalarlo escribiendo:
             sudo apt-get install npm</code></pre></li>
 <li><p>instale <code>npm</code> y si lo desea <code>nvm</code></p></li>
-</ul>
-<h2 id="acceso-por-ssh-y-credenciales">Acceso por SSH y Credenciales</h2>
-<ul>
-<li><p>Las credenciales son <code>usuario/usuario</code>, se les forzará a cambiar la contraseña ante el primer login.</p></li>
-<li><p>Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)</p></li>
-<li><p>Los usuarios tienen disponibilidad para hacer SSH a las máquinas,</p>
-<ol style="list-style-type: decimal">
-<li>dentro de la ULL <strong>entrando previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a></strong> y</li>
-<li>desde fuera de la ULL usando la VPN</li>
-</ol></li>
 </ul>
 <h3 id="vpn-ull">VPN ULL</h3>
 <p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
@@ -184,11 +195,5 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div class="figure">
 <img src="browser.png" alt="Visitando con el navegador la página" /><p class="caption">Visitando con el navegador la página</p>
 </div>
-<h2 id="puertos-abiertos-en-las-máquinas-virtuales">Puertos abiertos en las Máquinas Virtuales</h2>
-<ul>
-<li>Creo que ahora mismo están abiertos los puertos:</li>
-<li>22, 80, 443 y</li>
-<li>el rango del 8080 al 8090</li>
-</ul>
 </body>
 </html>
