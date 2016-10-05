@@ -42,7 +42,12 @@ eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa
           Direc. inet:55.5.555.55
 ```
 
-* A partir de ese momento use `ssh` para conectarse a su máquina virtual
+* La IP es el valor que aparece en el campo `inet`
+* A partir de ese momento use el cliente `ssh` en su ordenador para conectarse a su máquina virtual
+
+```bash
+$ ssh 55.5.555.55
+```
 
 ## VPN ULL
 
