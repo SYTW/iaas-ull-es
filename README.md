@@ -23,6 +23,16 @@ opciones de la cónsola)
 
 * Las máquinas tienen 2GB de RAM y 1 procesador de 2 CPUs cada una
 
+## Descripción de las máquinas
+
+Lo que está instalado en las máquinas depende del tipo de plantilla
+que haya solicitado el profesor para el curso.
+De todos modos, como tenemos permisos de administración no es mucho problema instalar cualquier software que nos falte.
+
+Lo que sigue es la descripción de una máquina típica correspondiente
+a una plantilla *de servidor*.
+
+
 * Está instalado `git`, una versión de `node`
 
                   usuario@SYTW:~$ git --version
