@@ -5,11 +5,15 @@ finales) accederán a [https://iaas.ull.es](https://iaas.ull.es), donde seleccio
 
 Recuerde que dentro de la ULL deberá haber **entrado previamente a [https://acceso.ull.es](https://acceso.ull.es)**, esto es estar autenticado como miembro de la ULL  y desde fuera de la ULL usando la VPN de la ULL
 
-### ![Autenticandose](ovirtportal.png)
-### Una vez autenticado le saldrá el menú con su panel de máquinas:
-### ![Panel de las máquinas](panelmaquina.png)
-### Al pulsar sobre `connect` se abrirá una terminal en el navegador:
-### ![Terminal en el navegador](terminalnavegador.png)
+![Autenticandose](ovirtportal.png)
+
+Una vez autenticado le saldrá el menú con su panel de máquinas:
+
+![Panel de las máquinas](panelmaquina.png)
+
+Al pulsar sobre `connect` se abrirá una terminal en el navegador:
+
+![Terminal en el navegador](terminalnavegador.png)
 
 ## Averiguar la IP de la máquina virtual
 
