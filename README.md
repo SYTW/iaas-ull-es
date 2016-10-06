@@ -237,7 +237,12 @@ o mejor aún use `nvm`
 
 * Use el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
 
-            usuario@SYTW:~/src/sytw/express-start/hello$ sudo nohup nodejs hello.js
+```bash
+usuario@ubuntu:~/src/express-start$ sudo nohup nodejs hello.js
+[sudo] password for usuario: 
+nohup: se descarta la entrada y se añade la salida a 'nohup.out'
+```
+
 si quieres evitar que el programa termine cuando hagas logout
 
 * A continuación visitamos la página con el navegador usando la URL con la IP:
