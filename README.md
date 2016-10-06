@@ -15,6 +15,16 @@ Al pulsar sobre `connect` se abrirá una terminal en el navegador:
 
 ![Terminal en el navegador](terminalnavegador.png)
 
+## Opciones de Consola
+
+Si tiene problemas conectándose a la máquina repase las opciones del campo `Console`:
+
+* Se han configurado con el visor VNC (recuerde poner la opción `noVNC` en las
+opciones de la cónsola). [VNC](https://en.wikipedia.org/wiki/Virtual_Network_Computing) es un sistema para compartir un desktop gráfico
+
+![Opciones de la Consola](novncconsoleoptions.png)
+
+
 ## Acceso por SSH y Credenciales
 
 * Las credenciales son `usuario/usuario`, se les forzará a cambiar la contraseña ante el primer login.
@@ -61,13 +71,6 @@ Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn
 * Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
 
 * Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf).
-
-## Opciones de Consola
-
-* Se han configurado con el visor VNC (recuerde poner la opción `noVNC` en las
-opciones de la cónsola)
-
-![Opciones de la Consola](novncconsoleoptions.png)
 
 
 
@@ -232,6 +235,9 @@ o mejor aún use `nvm`
             sudo: imposible resolver el anfitrión SYTW
             Example app listening at http://0.0.0.0:80
 
-* Visitamos la página con el navegador usando la URL con la IP:
+* Use el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
+si quiere evitar que el programa termine cuando hagas logout
+
+* A continuación visitamos la página con el navegador usando la URL con la IP:
 
 ![Visitando con el navegador la página](browser.png)
