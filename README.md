@@ -236,6 +236,8 @@ o mejor aún use `nvm`
             Example app listening at http://0.0.0.0:80
 
 * Use el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
+
+            usuario@SYTW:~/src/sytw/express-start/hello$ sudo nohup nodejs hello.js
 si quiere evitar que el programa termine cuando hagas logout
 
 * A continuación visitamos la página con el navegador usando la URL con la IP:
