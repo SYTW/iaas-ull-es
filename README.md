@@ -235,14 +235,14 @@ o mejor aún use `nvm`
             sudo: imposible resolver el anfitrión SYTW
             Example app listening at http://0.0.0.0:80
 
-* Use el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
+* Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
 
 ```bash
 usuario@ubuntu:~/src/express-start$ sudo nohup nodejs hello.js &
 nohup: se descarta la entrada y se añade la salida a 'nohup.out'
 ```
 
-si quieres evitar que el programa termine cuando hagas logout
+si queremos evitar que el programa termine cuando hagas logout
 
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
