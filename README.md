@@ -238,8 +238,7 @@ o mejor aún use `nvm`
 * Use el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
 
 ```bash
-usuario@ubuntu:~/src/express-start$ sudo nohup nodejs hello.js
-[sudo] password for usuario: 
+usuario@ubuntu:~/src/express-start$ sudo nohup nodejs hello.js &
 nohup: se descarta la entrada y se añade la salida a 'nohup.out'
 ```
 
