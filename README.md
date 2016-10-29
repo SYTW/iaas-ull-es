@@ -66,6 +66,8 @@ Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn
 
 ## Referencias
 
+* El tutorial [SERVICIO IAAS de la ULL](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html)
+
 * Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
 
 * Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
@@ -76,7 +78,7 @@ Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn
 
 ## Puertos abiertos en las Máquinas Virtuales
 
-* Creo que ahora mismo están abiertos los puertos:
+* Creo que ahora mismo las Máquinas Virtuales vienen con estos puertos abiertos:
   -  22, 80, 443 y
   - el rango del 8080 al 8090
 
