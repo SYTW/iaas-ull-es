@@ -258,7 +258,6 @@ es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar
 
 * Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
 si queremos evitar que el programa termine cuando hagas logout
-
 ```bash
 usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js 
 ```
