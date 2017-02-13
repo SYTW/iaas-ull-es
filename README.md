@@ -260,7 +260,7 @@ si queremos evitar que el programa termine cuando hagas logout
 ```bash
 usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js 
 ```
-La opción `-b` de `sudo` ejecuta el comando en background.
+La opción `-b` de [`sudo`](https://www.sudo.ws/man/1.8.13/sudo.man.html) ejecuta el comando en background.
 Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
