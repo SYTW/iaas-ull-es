@@ -77,13 +77,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
 <h2 id="referencias">Referencias</h2>
 <ul>
+<li><p>El tutorial <a href="https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html">SERVICIO IAAS de la ULL</a></p></li>
 <li><p>Véase <a href="https://sytw.github.io/iaas-ull-es/index.html">este documento como HTML</a></p></li>
 <li><p>Véase este <a href="https://github.com/SYTW/iaas-ull-es">repo en GitHub</a></p></li>
 <li><p>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">&quot;Manual de administración de Pools de máquinas&quot;</a>.</p></li>
 </ul>
 <h2 id="puertos-abiertos-en-las-máquinas-virtuales">Puertos abiertos en las Máquinas Virtuales</h2>
 <ul>
-<li>Creo que ahora mismo están abiertos los puertos:</li>
+<li>Creo que ahora mismo las Máquinas Virtuales vienen con estos puertos abiertos:</li>
 <li>22, 80, 443 y</li>
 <li>el rango del 8080 al 8090</li>
 </ul>
@@ -97,14 +98,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Lo que está instalado en las máquinas depende del tipo de plantilla que haya solicitado el profesor para el curso. De todos modos, como tenemos permisos de administración no es mucho problema instalar cualquier software que nos falte.</p>
 <p>Lo que sigue es la descripción de una máquina típica correspondiente a una plantilla <em>de servidor</em>.</p>
 <ul>
-<li><p>Está instalado <code>git</code>, una versión de <code>node</code></p>
+<li><p>Suele estar instalado <code>git</code>:</p>
 <pre><code>          usuario@SYTW:~$ git --version
           git version 1.9.1</code></pre></li>
 </ul>
 <p>Si queremos actualizar <code>git</code>:</p>
 <pre class="sh"><code>apt-get install git</code></pre>
 <ul>
-<li><p>Está instalado <code>nodejs</code>. Recuerde que es Linux Ubuntu: <code>node</code> no es <code>nodejs</code>:</p>
+<li><p>Suele estar instalado <code>nodejs</code>. Recuerde que es Linux Ubuntu: <code>node</code> no es <code>nodejs</code>:</p>
 <pre><code>    usuario@SYTW:~$ node --version
     El programa «node» puede encontrarse en los siguientes paquetes:
      * node
@@ -113,6 +114,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
     usuario@SYTW:~$ nodejs --version
     v0.10.25</code></pre></li>
+</ul>
+<p>Si no está instalado siga las instrucciones en <a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> <code>bash   curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -   sudo apt-get install -y nodejs</code> Haga un enlace simbólico de <code>node</code> a <code>node.js</code> <code>bash   usuario@ubuntu:~$ which nodejs   /usr/bin/nodejs   usuario@ubuntu:~$ sudo ln -s /usr/bin/nodejs /usr/bin/node   usuario@ubuntu:~$ node --version   v4.2.6</code></p>
+<ul>
 <li><p>y está instalada una versión vieja de <code>ruby</code>.</p>
 <pre><code>        usuario@SYTW:~$ ruby --version
         ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]</code></pre></li>
