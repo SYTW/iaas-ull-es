@@ -154,7 +154,8 @@ apt-get install git
                     El programa «npm» no está instalado. Puede instalarlo escribiendo:
                     sudo apt-get install npm
 
-* instale `npm` y si lo desea `nvm`. [nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
+* instale `npm` y si lo desea `nvm`. 
+[nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
 es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
 
@@ -164,7 +165,9 @@ es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar
 
               usuario@SYTW:~/src/sytw/express-start/hello$ sudo apt-get install npm
 
-o mejor aún use `nvm`
+o mejor aún use `nvm`.
+[nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
+es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
 ## Configure el cliente ssh para trabajar con GitHub
 
@@ -254,13 +257,14 @@ o mejor aún use `nvm`
             Example app listening at http://0.0.0.0:80
 
 * Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
+si queremos evitar que el programa termine cuando hagas logout
 
 ```bash
-usuario@ubuntu:~/src/express-start$ sudo nohup nodejs hello.js &
-nohup: se descarta la entrada y se añade la salida a 'nohup.out'
+usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js 
 ```
+La opción `-b` de `sudo` ejecuta el comando en background.
+Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 
-si queremos evitar que el programa termine cuando hagas logout
 
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
