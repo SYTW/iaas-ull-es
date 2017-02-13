@@ -154,7 +154,8 @@ apt-get install git
                     El programa «npm» no está instalado. Puede instalarlo escribiendo:
                     sudo apt-get install npm
 
-* instale `npm` y si lo desea `nvm`. [nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
+* instale `npm` y si lo desea `nvm`. 
+[nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
 es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
 
@@ -164,7 +165,9 @@ es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar
 
               usuario@SYTW:~/src/sytw/express-start/hello$ sudo apt-get install npm
 
-o mejor aún use `nvm`
+o mejor aún use `nvm`.
+[nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
+es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
 ## Configure el cliente ssh para trabajar con GitHub
 
