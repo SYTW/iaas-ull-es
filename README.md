@@ -257,13 +257,14 @@ es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar
             Example app listening at http://0.0.0.0:80
 
 * Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
+si queremos evitar que el programa termine cuando hagas logout
 
 ```bash
-usuario@ubuntu:~/src/express-start$ sudo nohup nodejs hello.js &
-nohup: se descarta la entrada y se añade la salida a 'nohup.out'
+usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js 
 ```
+La opción `-b` de `sudo` ejecuta el comando en background.
+Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 
-si queremos evitar que el programa termine cuando hagas logout
 
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
