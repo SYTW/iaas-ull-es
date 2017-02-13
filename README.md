@@ -98,7 +98,7 @@ Lo que sigue es la descripción de una máquina típica correspondiente
 a una plantilla *de servidor*.
 
 
-* Está instalado `git`, una versión de `node`
+* Suele estar instalado `git`:
 
                   usuario@SYTW:~$ git --version
                   git version 1.9.1
@@ -108,7 +108,7 @@ Si queremos actualizar `git`:
 apt-get install git
 ```
 
-* Está instalado `nodejs`. Recuerde que es Linux Ubuntu: `node` no es  `nodejs`:
+* Suele estar instalado `nodejs`. Recuerde que es Linux Ubuntu: `node` no es  `nodejs`:
 
             usuario@SYTW:~$ node --version
             El programa «node» puede encontrarse en los siguientes paquetes:
@@ -118,6 +118,20 @@ apt-get install git
 
             usuario@SYTW:~$ nodejs --version
             v0.10.25
+
+  Si no está instalado siga las instrucciones en [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/)
+  ```bash
+  curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  ```
+  Haga un enlace simbólico de `node` a `node.js`
+  ```bash
+  usuario@ubuntu:~$ which nodejs
+  /usr/bin/nodejs
+  usuario@ubuntu:~$ sudo ln -s /usr/bin/nodejs /usr/bin/node
+  usuario@ubuntu:~$ node --version
+  v4.2.6
+  ```
 
 * y está instalada una versión vieja de `ruby`.
 
