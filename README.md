@@ -250,10 +250,9 @@ es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar
 
 ## Ejecución de un servicio
 
-* Ejecutamos:
+* Ejecutamos (El `sudo` es necesario porque estamos usando el puerto 80):
 
             usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js
-            sudo: imposible resolver el anfitrión SYTW
             Example app listening at http://0.0.0.0:80
 
 * Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
