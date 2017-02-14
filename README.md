@@ -211,32 +211,48 @@ es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar
 
             usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
 ```javascript
-            var express = require('express')
-            var app = express()
-            var path = require('path');
+var express = require('express')
+var app = express()
+var path = require('path');
 
-            // view engine setup
-            app.set('views', path.join(__dirname, 'views'));
-            app.set('view engine', 'ejs');
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-            app.get('/', function (req, res) {
-              //res.send('Hello World!')
-              res.render('index', { title: 'Express' });
-            })
+app.use(express.static('public'));
 
-            app.get('/chuchu', function (req, res) {
-              //res.send('Hello Chuchu!')
-              res.render('index', { title: 'Chuchu' });
-            })
+app.get('/', function (req, res) {
+  //res.send('Hello World!')
+  res.render('index', { title: 'Express' });
+})
 
-            var server = app.listen(80, function () {
+/*
+ var router = express.Router();
+  module.exports = router; 
+*/
+app.get('/chuchu', function (req, res) {
+  //res.send('Hello Chuchu!')
+  res.render('index', { title: 'Chuchu' });
+})
 
-              var host = server.address().address
-              var port = server.address().port
+app.get('/cat', function (req, res) {
+  res.send('Got a GET request'+
+    '<br/><img src="kitten.jpg" />'
+  );
+})
 
-              console.log('Example app listening at http://%s:%s', host, port)
+app.get('/dog', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/dog.jpg'));
+});
 
-            })
+var server = app.listen(8080, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log('Example app listening at http://%s:%s', host, port)
+
+})
 ```
 
 ## Instalando dependencias
