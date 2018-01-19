@@ -63,6 +63,39 @@ $ ssh 55.5.555.55
 
 Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
 
+## Configure la ssh de su portátil/desktop para acceder a su máquina del iaas
+
+1. Genere una clave rsa en su portátil (limitación en 2018: tiene que ser rsa)
+
+```bash
+~/.ssh(master)]$ ssh-keygen -trsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/casiano/.ssh/id_rsa): miclave
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in miclave.
+Your public key has been saved in miclave.pub.
+```
+2.  Añada una entrada en su fichero `~/.ssh/config`:
+
+```bash
+# PL 17/18
+# iaas.ull.es
+Host pl1718
+HostName 11.1.111.111
+user usuario
+IdentityFile /Users/casiano/.ssh/miclave
+## send the signal every four minutes
+ServerAliveInterval 240
+```
+3. Publique la clave en su máquina `iaas`
+
+```bash
+usuario@ubuntu:~/.ssh$ cd .ssh/
+usuario@ubuntu:~/.ssh$ vi authorized_keys
+```
+añada los contenidos de `miclave.pub`
+
 
 ## Referencias
 
