@@ -71,8 +71,8 @@ Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn
 ~/.ssh(master)]$ ssh-keygen -trsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/casiano/.ssh/id_rsa): miclave
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in miclave.
 Your public key has been saved in miclave.pub.
 ```
@@ -157,7 +157,7 @@ apt-get install git
   curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
   sudo apt-get install -y nodejs
   ```
-  Haga un enlace simbólico de `node` a `node.js`
+*  *Haga un enlace simbólico* de `node` a `node.js`
   ```bash
   usuario@ubuntu:~$ which nodejs
   /usr/bin/nodejs
@@ -165,13 +165,44 @@ apt-get install git
   usuario@ubuntu:~$ node --version
   v4.2.6
   ```
+* O mejor aún instale primero [nvm](https://github.com/creationix/nvm) y luego instale Node.js. nvm es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
-* y está instalada una versión vieja de `ruby`.
+  ```bash
+usuario@ubuntu:~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  ```
+  El script clona el repositorio de  nvm a `~/.nvm` y añade líneas a nuestro script de arranque de perfil (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`). Es por eso que tenemos que rearrancar la terminal:
+
+  ```bash
+  usuario@ubuntu:~$ command -V nvm
+  -bash: command: nvm: no se encontró
+  usuario@ubuntu:~$ bash
+  usuario@ubuntu:~$ nvm list
+              N/A
+  node -> stable (-> N/A) (default)
+  iojs -> N/A (default)
+  ```
+  Podemos ahora instalar tantas versiones de node como queramos:
+  ```bash
+  usuario@ubuntu:~$ nvm install node
+  Downloading and installing node v9.4.0...
+  usuario@ubuntu:~$ nvm list
+  ->       v9.4.0
+  default -> node (-> v9.4.0)
+  node -> stable (-> v9.4.0) (default)
+  stable -> 9.4 (-> v9.4.0) (default)
+  iojs -> N/A (default)
+  lts/* -> lts/carbon (-> N/A)
+  lts/argon -> v4.8.7 (-> N/A)
+  lts/boron -> v6.12.3 (-> N/A)
+  lts/carbon -> v8.9.4 (-> N/A)
+  ```
+
+*  A veces está instalada una versión vieja de `ruby`.
 
                 usuario@SYTW:~$ ruby --version
                 ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
 
-* Tampoco `rvm`:
+* Tampoco suele estar `rvm`:
 
                   usuario@SYTW:~$ rvm --version
                   No se ha encontrado la orden «rvm» pero hay 20 similares
@@ -187,20 +218,11 @@ apt-get install git
                     El programa «npm» no está instalado. Puede instalarlo escribiendo:
                     sudo apt-get install npm
 
-* instale `npm` y si lo desea `nvm`. 
+* instale `npm` y si lo desea `nvm`.
 [nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
 es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
 
-## Instalar `npm`
-
-* Instale `npm` si no está instalada
-
-              usuario@SYTW:~/src/sytw/express-start/hello$ sudo apt-get install npm
-
-o mejor aún use `nvm`.
-[nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
-es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
 ## Configure el cliente ssh para trabajar con GitHub
 
@@ -261,7 +283,7 @@ app.get('/', function (req, res) {
 
 /*
  var router = express.Router();
-  module.exports = router; 
+  module.exports = router;
 */
 app.get('/chuchu', function (req, res) {
   //res.send('Hello Chuchu!')
@@ -307,7 +329,7 @@ var server = app.listen(8080, function () {
 * Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
 si queremos evitar que el programa termine cuando hagas logout
 ```bash
-usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js 
+usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js
 ```
 La opción `-b` de [`sudo`](https://www.sudo.ws/man/1.8.13/sudo.man.html) ejecuta el comando en background.
 Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
