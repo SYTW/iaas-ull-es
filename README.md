@@ -197,33 +197,6 @@ apt-get install git
   lts/carbon -> v8.9.4 (-> N/A)
   ```
 
-*  A veces está instalada una versión vieja de `ruby`.
-
-                usuario@SYTW:~$ ruby --version
-                ruby 1.9.3p484 (2013-11-22 revision 43786) [x86_64-linux]
-
-* Tampoco suele estar `rvm`:
-
-                  usuario@SYTW:~$ rvm --version
-                  No se ha encontrado la orden «rvm» pero hay 20 similares
-
-* No está nada más.
-
-                  usuario@SYTW:~$ nvm --version
-                  No se ha encontrado la orden «nvm»
-
-* Tampoco está `npm`:
-
-                    usuario@SYTW:~$ npm --version
-                    El programa «npm» no está instalado. Puede instalarlo escribiendo:
-                    sudo apt-get install npm
-
-* instale `npm` y si lo desea `nvm`.
-[nvm o Node Version Manager](https://github.com/creationix/nvm/blob/master/README.markdown)
-es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
-
-
-
 ## Configure el cliente ssh para trabajar con GitHub
 
 * Recuerde poner sus claves privadas de GitHub en `.ssh` para poder trabajar con sus repos
