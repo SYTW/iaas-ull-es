@@ -168,7 +168,7 @@ apt-get install git
 * O mejor aún instale primero [nvm](https://github.com/creationix/nvm) y luego instale Node.js. nvm es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión
 
   ```bash
-usuario@ubuntu:~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  usuario@ubuntu:~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
   ```
   El script clona el repositorio de  nvm a `~/.nvm` y añade líneas a nuestro script de arranque de perfil (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`). Es por eso que tenemos que rearrancar la terminal:
 
