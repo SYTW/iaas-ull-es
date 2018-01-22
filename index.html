@@ -150,7 +150,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
     user git
     IdentityFile /home/usuario/.ssh/miclaveparagithub</code></pre></li>
 </ul>
-<h2 id="descargando-un-repo">Descargando un repo</h2>
+<h2 id="desplegando-una-aplicación-web-en-su-máquina-del-iaas">Desplegando una aplicación Web en su máquina del iaas</h2>
 <ul>
 <li><p>Cree un directorio de trabajo:</p>
 <pre><code>  usuario@SYTW:~$ mkdir src
@@ -167,26 +167,57 @@ code > span.er { color: #ff0000; font-weight: bold; }
   Receiving objects: 100% (87/87), 66.93 KiB | 0 bytes/s, done.
   Resolving deltas: 100% (41/41), done.
   Checking connectivity... hecho.</code></pre></li>
-<li><p>Este es el contenido de la aplicación de ejemplo <a href="https://github.com/crguezl/express-start/blob/master/hello/hello.js">hello.js</a>:</p>
-<pre><code>    usuario@SYTW:~/src/sytw/express-start$ cd hello/
-
-    usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
-    usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
-
-    usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js</code></pre>
-<p>```javascript var express = require('express') var app = express() var path = require('path');</p></li>
+<li><p>Este es el contenido de la aplicación de ejemplo <a href="https://github.com/crguezl/express-start/blob/master/hello/hello.js">hello.js</a>:</p></li>
 </ul>
-<p>// view engine setup app.set('views', path.join(__dirname, 'views')); app.set('view engine', 'ejs');</p>
-<p>app.use(express.static('public'));</p>
-<p>app.get('/', function (req, res) { //res.send('Hello World!') res.render('index', { title: 'Express' }); })</p>
-<p>/<em> var router = express.Router(); module.exports = router; </em>/ app.get('/chuchu', function (req, res) { //res.send('Hello Chuchu!') res.render('index', { title: 'Chuchu' }); })</p>
-<p>app.get('/cat', function (req, res) { res.send('Got a GET request'+ '<br/><img src="kitten.jpg" />' ); })</p>
-<p>app.get('/dog', function (req, res) { res.sendFile(path.join(__dirname, 'public/dog.jpg')); });</p>
-<p>var server = app.listen(8080, function () {</p>
-<p>var host = server.address().address var port = server.address().port</p>
-<p>console.log('Example app listening at http://%s:%s', host, port)</p>
-<p>}) ```</p>
-<h2 id="instalando-dependencias">Instalando dependencias</h2>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@SYTW</span>:~/src/sytw/express-start$ cd hello/
+
+<span class="kw">usuario@SYTW</span>:~/src/sytw/express-start/hello$ vi hello.js
+<span class="kw">usuario@SYTW</span>:~/src/sytw/express-start/hello$ <span class="co"># cambiamos port de escucha a 80</span>
+
+<span class="kw">usuario@SYTW</span>:~/src/sytw/express-start/hello$ cat hello.js</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> express = <span class="fu">require</span>(<span class="st">&#39;express&#39;</span>)
+<span class="kw">var</span> app = <span class="fu">express</span>()
+<span class="kw">var</span> path = <span class="fu">require</span>(<span class="st">&#39;path&#39;</span>);
+
+<span class="co">// view engine setup</span>
+<span class="ot">app</span>.<span class="fu">set</span>(<span class="st">&#39;views&#39;</span>, <span class="ot">path</span>.<span class="fu">join</span>(__dirname, <span class="st">&#39;views&#39;</span>));
+<span class="ot">app</span>.<span class="fu">set</span>(<span class="st">&#39;view engine&#39;</span>, <span class="st">&#39;ejs&#39;</span>);
+
+<span class="ot">app</span>.<span class="fu">use</span>(<span class="ot">express</span>.<span class="fu">static</span>(<span class="st">&#39;public&#39;</span>));
+
+<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/&#39;</span>, <span class="kw">function</span> (req, res) {
+  <span class="co">//res.send(&#39;Hello World!&#39;)</span>
+  <span class="ot">res</span>.<span class="fu">render</span>(<span class="st">&#39;index&#39;</span>, { <span class="dt">title</span>: <span class="st">&#39;Express&#39;</span> });
+})
+
+<span class="co">/*</span>
+<span class="co"> var router = express.Router();</span>
+<span class="co">  module.exports = router;</span>
+<span class="co">*/</span>
+<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/chuchu&#39;</span>, <span class="kw">function</span> (req, res) {
+  <span class="co">//res.send(&#39;Hello Chuchu!&#39;)</span>
+  <span class="ot">res</span>.<span class="fu">render</span>(<span class="st">&#39;index&#39;</span>, { <span class="dt">title</span>: <span class="st">&#39;Chuchu&#39;</span> });
+})
+
+<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/cat&#39;</span>, <span class="kw">function</span> (req, res) {
+  <span class="ot">res</span>.<span class="fu">send</span>(<span class="st">&#39;Got a GET request&#39;</span>+
+    <span class="st">&#39;&lt;br/&gt;&lt;img src=&quot;kitten.jpg&quot; /&gt;&#39;</span>
+  );
+})
+
+<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/dog&#39;</span>, <span class="kw">function</span> (req, res) {
+  <span class="ot">res</span>.<span class="fu">sendFile</span>(<span class="ot">path</span>.<span class="fu">join</span>(__dirname, <span class="st">&#39;public/dog.jpg&#39;</span>));
+});
+
+<span class="kw">var</span> server = <span class="ot">app</span>.<span class="fu">listen</span>(<span class="dv">8080</span>, <span class="kw">function</span> () {
+
+  <span class="kw">var</span> host = <span class="ot">server</span>.<span class="fu">address</span>().<span class="fu">address</span>
+  <span class="kw">var</span> port = <span class="ot">server</span>.<span class="fu">address</span>().<span class="fu">port</span>
+
+  <span class="ot">console</span>.<span class="fu">log</span>(<span class="st">&#39;Example app listening at http://%s:%s&#39;</span>, host, port)
+
+})</code></pre>
+<h3 id="instalando-dependencias">Instalando dependencias</h3>
 <ul>
 <li><p>Instalamos las dependencias:</p>
 <pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ npm install
@@ -194,7 +225,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
     npm WARN package.json hello@0.0.0 No repository field.
     ...</code></pre></li>
 </ul>
-<h2 id="ejecución-de-un-servicio">Ejecución de un servicio</h2>
+<h3 id="ejecución-de-un-servicio">Ejecución de un servicio</h3>
 <ul>
 <li><p>Ejecutamos (El <code>sudo</code> es necesario porque estamos usando el puerto 80):</p>
 <pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js
@@ -212,7 +243,8 @@ La opción <code>-b</code> de <a href="https://www.sudo.ws/man/1.8.13/sudo.man.h
 <li><p>El tutorial <a href="https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html">SERVICIO IAAS de la ULL</a></p></li>
 <li><p>Véase <a href="https://sytw.github.io/iaas-ull-es/index.html">este documento como HTML</a></p></li>
 <li><p>Véase este <a href="https://github.com/SYTW/iaas-ull-es">repo en GitHub</a></p></li>
-<li><p>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">&quot;Manual de administración de Pools de máquinas&quot;</a>.</p></li>
+<li>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">&quot;Manual de administración de Pools de máquinas&quot;</a>.</li>
+<li><p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p></li>
 </ul>
 </body>
 </html>
