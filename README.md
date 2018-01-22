@@ -3,6 +3,8 @@
 Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios
 finales) accederán a [https://iaas.ull.es](https://iaas.ull.es), donde seleccionarán la opción **Portal del usuario**.
 
+## Recuerde estar autenticado en la ULL
+
 Recuerde que dentro de la ULL deberá haber **entrado previamente a [https://acceso.ull.es](https://acceso.ull.es)**, esto es estar autenticado como miembro de la ULL  y desde fuera de la ULL usando la VPN de la ULL
 
 ![Autenticandose](ovirtportal.png)
@@ -59,7 +61,7 @@ eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa
 $ ssh 55.5.555.55
 ```
 
-## VPN ULL
+## Conectarse desde fuera de la ULL: VPN ULL
 
 Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
 
@@ -298,6 +300,9 @@ usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js
 ```
 La opción `-b` de [`sudo`](https://www.sudo.ws/man/1.8.13/sudo.man.html) ejecuta el comando en background.
 Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
+
+### Vistando la Aplicación
+
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
 ![Visitando con el navegador la página](browser.png)

@@ -29,6 +29,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <body>
 <h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="https://iaas.ull.es">iaas.ull.es</a></h1>
 <p>Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios finales) accederán a <a href="https://iaas.ull.es" class="uri">https://iaas.ull.es</a>, donde seleccionarán la opción <strong>Portal del usuario</strong>.</p>
+<h2 id="recuerde-estar-autenticado-en-la-ull">Recuerde estar autenticado en la ULL</h2>
 <p>Recuerde que dentro de la ULL deberá haber <strong>entrado previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a></strong>, esto es estar autenticado como miembro de la ULL y desde fuera de la ULL usando la VPN de la ULL</p>
 <div class="figure">
 <img src="ovirtportal.png" alt="Autenticandose" /><p class="caption">Autenticandose</p>
@@ -73,7 +74,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>A partir de ese momento use el cliente <code>ssh</code> en su ordenador para conectarse a su máquina virtual</li>
 </ul>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ssh</span> 55.5.555.55</code></pre>
-<h2 id="vpn-ull">VPN ULL</h2>
+<h2 id="conectarse-desde-fuera-de-la-ull-vpn-ull">Conectarse desde fuera de la ULL: VPN ULL</h2>
 <p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
 <h2 id="configure-la-ssh-de-su-portátildesktop-para-acceder-a-su-máquina-del-iaas">Configure la ssh de su portátil/desktop para acceder a su máquina del iaas</h2>
 <ol style="list-style-type: decimal">
@@ -232,8 +233,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
     Example app listening at http://0.0.0.0:80</code></pre></li>
 <li><p>Usamos el comando unix <a href="http://linux.101hacks.com/unix/nohup-command/"><code>nohup</code></a> si queremos evitar que el programa termine cuando hagas logout</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@ubuntu</span>:~/src/express-start/hello$ nohup sudo -b node hello.js</code></pre>
-La opción <code>-b</code> de <a href="https://www.sudo.ws/man/1.8.13/sudo.man.html"><code>sudo</code></a> ejecuta el comando en background. Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.</li>
-<li><p>A continuación visitamos la página con el navegador usando la URL con la IP:</p></li>
+<p>La opción <code>-b</code> de <a href="https://www.sudo.ws/man/1.8.13/sudo.man.html"><code>sudo</code></a> ejecuta el comando en background. Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.</p></li>
+</ul>
+<h3 id="vistando-la-aplicación">Vistando la Aplicación</h3>
+<ul>
+<li>A continuación visitamos la página con el navegador usando la URL con la IP:</li>
 </ul>
 <div class="figure">
 <img src="browser.png" alt="Visitando con el navegador la página" /><p class="caption">Visitando con el navegador la página</p>
