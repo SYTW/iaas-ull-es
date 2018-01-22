@@ -97,18 +97,7 @@ usuario@ubuntu:~/.ssh$ vi authorized_keys
 añada los contenidos de `miclave.pub`
 
 
-## Referencias
-
-* El tutorial [SERVICIO IAAS de la ULL](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html)
-
-* Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
-
-* Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
-
-* Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf).
-
-
-
+#
 ## Puertos abiertos en las Máquinas Virtuales
 
 * Creo que ahora mismo las Máquinas Virtuales vienen con estos puertos abiertos:
@@ -309,3 +298,13 @@ Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
 ![Visitando con el navegador la página](browser.png)
+
+# Referencias
+
+* El tutorial [SERVICIO IAAS de la ULL](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html)
+
+* Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
+
+* Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
+
+* Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf).
