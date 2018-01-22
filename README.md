@@ -33,8 +33,8 @@ opciones de la cónsola). [VNC](https://en.wikipedia.org/wiki/Virtual_Network_Co
 
 * Los usuarios tienen disponibilidad para hacer SSH a las máquinas,
 
-    1. dentro de la ULL **entrando previamente a [https://acceso.ull.es](https://acceso.ull.es)** y
-    2. desde fuera de la ULL usando la VPN
+    1. Dentro de la ULL **entrando previamente a [https://acceso.ull.es](https://acceso.ull.es)** y
+    2. Desde fuera de la ULL usando la VPN
 
 
 Serán requeridas las credenciales de la ULL; es decir, este servicio será exclusivo para la
