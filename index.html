@@ -1,61 +1,115 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
   <style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <h1 id="como-desplegar-una-aplicación-web-en-iaas.ull.es">Como Desplegar una Aplicación Web en <a href="https://iaas.ull.es">iaas.ull.es</a></h1>
 <p>Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios finales) accederán a <a href="https://iaas.ull.es" class="uri">https://iaas.ull.es</a>, donde seleccionarán la opción <strong>Portal del usuario</strong>.</p>
 <h2 id="recuerde-estar-autenticado-en-la-ull">Recuerde estar autenticado en la ULL</h2>
 <p>Recuerde que dentro de la ULL deberá haber <strong>entrado previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a></strong>, esto es estar autenticado como miembro de la ULL y desde fuera de la ULL usando la VPN de la ULL</p>
-<div class="figure">
-<img src="ovirtportal.png" alt="Autenticandose" /><p class="caption">Autenticandose</p>
-</div>
+<figure>
+<img src="ovirtportal.png" alt="Autenticandose" /><figcaption>Autenticandose</figcaption>
+</figure>
 <p>Una vez autenticado le saldrá el menú con su panel de máquinas:</p>
-<div class="figure">
-<img src="panelmaquina.png" alt="Panel de las máquinas" /><p class="caption">Panel de las máquinas</p>
-</div>
+<figure>
+<img src="panelmaquina.png" alt="Panel de las máquinas" /><figcaption>Panel de las máquinas</figcaption>
+</figure>
 <p>Al pulsar sobre <code>connect</code> se abrirá una terminal en el navegador:</p>
-<div class="figure">
-<img src="terminalnavegador.png" alt="Terminal en el navegador" /><p class="caption">Terminal en el navegador</p>
-</div>
+<figure>
+<img src="terminalnavegador.png" alt="Terminal en el navegador" /><figcaption>Terminal en el navegador</figcaption>
+</figure>
 <h2 id="opciones-de-consola">Opciones de Consola</h2>
 <p>Si tiene problemas conectándose a la máquina repase las opciones del campo <code>Console</code>:</p>
 <ul>
 <li>Se han configurado con el visor VNC (recuerde poner la opción <code>noVNC</code> en las opciones de la cónsola). <a href="https://en.wikipedia.org/wiki/Virtual_Network_Computing">VNC</a> es un sistema para compartir un desktop gráfico</li>
 </ul>
-<div class="figure">
-<img src="novncconsoleoptions.png" alt="Opciones de la Consola" /><p class="caption">Opciones de la Consola</p>
-</div>
+<figure>
+<img src="novncconsoleoptions.png" alt="Opciones de la Consola" /><figcaption>Opciones de la Consola</figcaption>
+</figure>
 <h2 id="acceso-por-ssh-y-credenciales">Acceso por SSH y Credenciales</h2>
 <ul>
 <li><p>Las credenciales son <code>usuario/usuario</code>, se les forzará a cambiar la contraseña ante el primer login.</p></li>
 <li><p>Las máquinas tienen IP dinámica por DHCP (en principio tienen keepalive así que no debería cambiarlas)</p></li>
 <li><p>Los usuarios tienen disponibilidad para hacer SSH a las máquinas,</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Dentro de la ULL <strong>entrando previamente a <a href="https://acceso.ull.es" class="uri">https://acceso.ull.es</a></strong> y</li>
 <li>Desde fuera de la ULL usando la VPN</li>
 </ol></li>
@@ -66,50 +120,52 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>La terminal en el navegador no es útil en absoluto.</li>
 <li>Use la terminal en el navegador para averiguar la IP de la máquina para poder usar <code>ssh</code> posteriormente. En la terminal de su navegador conectado a la máquina escriba:</li>
 </ul>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@SYTW</span>:~/src/sytw$ ifconfig
-<span class="kw">eth0</span>      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  
-          <span class="kw">Direc.</span> inet:55.5.555.55</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">usuario@SYTW</span>:~/src/sytw$ ifconfig</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="ex">eth0</span>      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa  </a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">          <span class="ex">Direc.</span> inet:55.5.555.55</a></code></pre></div>
 <ul>
 <li>La IP es el valor que aparece en el campo <code>inet</code></li>
 <li>A partir de ese momento use el cliente <code>ssh</code> en su ordenador para conectarse a su máquina virtual</li>
 </ul>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">ssh</span> 55.5.555.55</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1">$ <span class="fu">ssh</span> 55.5.555.55</a></code></pre></div>
 <h2 id="conectarse-desde-fuera-de-la-ull-vpn-ull">Conectarse desde fuera de la ULL: VPN ULL</h2>
 <p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p>
 <h2 id="configure-la-ssh-de-su-portátildesktop-para-acceder-a-su-máquina-del-iaas">Configure la ssh de su portátil/desktop para acceder a su máquina del iaas</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Genere una clave rsa en su portátil (limitación en 2018: tiene que ser rsa)</li>
 </ol>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">~</span>/<span class="kw">.ssh</span>(master)]$ <span class="kw">ssh-keygen</span> -trsa
-<span class="kw">Generating</span> public/private rsa key pair.
-<span class="kw">Enter</span> file in which to save the key (/Users/casiano/.ssh/id_rsa)<span class="kw">:</span> miclave
-<span class="kw">Enter</span> passphrase (empty for no passphrase)<span class="kw">:</span>
-<span class="kw">Enter</span> same passphrase again:
-<span class="kw">Your</span> identification has been saved in miclave.
-<span class="kw">Your</span> public key has been saved in miclave.pub.</code></pre>
-<ol start="2" style="list-style-type: decimal">
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">~</span>/<span class="ex">.ssh</span>(master)]$ <span class="fu">ssh-keygen</span> -trsa</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="ex">Generating</span> public/private rsa key pair.</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="ex">Enter</span> file in which to save the key (/Users/casiano/.ssh/id_rsa)<span class="bu">:</span> miclave</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="ex">Enter</span> passphrase (empty for no passphrase)<span class="bu">:</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="ex">Enter</span> same passphrase again:</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="ex">Your</span> identification has been saved in miclave.</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="ex">Your</span> public key has been saved in miclave.pub.</a></code></pre></div>
+<ol start="2" type="1">
 <li>Añada una entrada en su fichero <code>~/.ssh/config</code>:</li>
 </ol>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># PL 17/18</span>
-<span class="co"># iaas.ull.es</span>
-<span class="kw">Host</span> pl1718
-<span class="kw">HostName</span> 11.1.111.111
-<span class="kw">user</span> usuario
-<span class="kw">IdentityFile</span> /Users/casiano/.ssh/miclave
-<span class="co">## send the signal every four minutes</span>
-<span class="kw">ServerAliveInterval</span> 240</code></pre>
-<ol start="3" style="list-style-type: decimal">
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># PL 17/18</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co"># iaas.ull.es</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="ex">Host</span> pl1718</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="ex">HostName</span> 11.1.111.111</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="ex">user</span> usuario</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="ex">IdentityFile</span> /Users/casiano/.ssh/miclave</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">## send the signal every four minutes</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="ex">ServerAliveInterval</span> 240</a></code></pre></div>
+<ol start="3" type="1">
 <li>Publique la clave en su máquina <code>iaas</code></li>
 </ol>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@ubuntu</span>:~/.ssh$ cd .ssh/
-<span class="kw">usuario@ubuntu</span>:~/.ssh$ vi authorized_keys</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~/.ssh$ cd .ssh/</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="ex">usuario@ubuntu</span>:~/.ssh$ vi authorized_keys</a></code></pre></div>
 <p>añada los contenidos de <code>miclave.pub</code></p>
 <h1 id="section"></h1>
 <h2 id="puertos-abiertos-en-las-máquinas-virtuales">Puertos abiertos en las Máquinas Virtuales</h2>
 <ul>
-<li>Creo que ahora mismo las Máquinas Virtuales vienen con estos puertos abiertos:</li>
+<li>Creo que ahora mismo las Máquinas Virtuales vienen con estos puertos abiertos:
+<ul>
 <li>22, 80, 443 y</li>
 <li>el rango del 8080 al 8090</li>
+</ul></li>
 </ul>
 <h2 id="descripción-de-las-máquinas">Descripción de las máquinas</h2>
 <ul>
@@ -122,132 +178,188 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Lo que sigue es la descripción de una máquina típica correspondiente a una plantilla <em>de servidor</em>.</p>
 <ul>
 <li><p>Suele estar instalado <code>git</code>:</p>
-<pre><code>          usuario@SYTW:~$ git --version
-          git version 1.9.1</code></pre></li>
+<pre><code>            usuario@SYTW:~$ git --version
+            git version 1.9.1</code></pre></li>
 </ul>
 <p>Si queremos actualizar <code>git</code>:</p>
-<pre class="sh"><code>apt-get install git</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="ex">apt-get</span> install git</a></code></pre></div>
 <ul>
 <li><p>Suele estar instalado <code>nodejs</code>. Recuerde que es Linux Ubuntu: <code>node</code> no es <code>nodejs</code>:</p>
-<pre><code>    usuario@SYTW:~$ node --version
-    El programa «node» puede encontrarse en los siguientes paquetes:
-     * node
-     * nodejs-legacy
-    Intente: sudo apt-get install &lt;paquete seleccionado&gt;
+<pre><code>      usuario@SYTW:~$ node --version
+      El programa «node» puede encontrarse en los siguientes paquetes:
+       * node
+       * nodejs-legacy
+      Intente: sudo apt-get install &lt;paquete seleccionado&gt;
 
-    usuario@SYTW:~$ nodejs --version
-    v0.10.25</code></pre></li>
+      usuario@SYTW:~$ nodejs --version
+      v0.10.25</code></pre>
+<p>Si no está instalado siga las instrucciones en <a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="ex">curl</span> -sL https://deb.nodesource.com/setup_7.x <span class="kw">|</span> <span class="fu">sudo</span> -E bash -</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="fu">sudo</span> apt-get install -y nodejs</a></code></pre></div></li>
+<li><em>Haga un enlace simbólico</em> de <code>node</code> a <code>node.js</code></li>
 </ul>
-<p>Si no está instalado siga las instrucciones en <a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> <code>bash   curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -   sudo apt-get install -y nodejs</code> * <em>Haga un enlace simbólico</em> de <code>node</code> a <code>node.js</code> <code>bash   usuario@ubuntu:~$ which nodejs   /usr/bin/nodejs   usuario@ubuntu:~$ sudo ln -s /usr/bin/nodejs /usr/bin/node   usuario@ubuntu:~$ node --version   v4.2.6</code> * O mejor aún instale primero <a href="https://github.com/creationix/nvm">nvm</a> y luego instale Node.js. nvm es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión</p>
-<p><code>bash   usuario@ubuntu:~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash</code> El script clona el repositorio de nvm a <code>~/.nvm</code> y añade líneas a nuestro script de arranque de perfil (<code>~/.bash_profile</code>, <code>~/.zshrc</code>, <code>~/.profile</code>, or <code>~/.bashrc</code>). Es por eso que tenemos que rearrancar la terminal:</p>
-<p><code>bash   usuario@ubuntu:~$ command -V nvm   -bash: command: nvm: no se encontró   usuario@ubuntu:~$ bash   usuario@ubuntu:~$ nvm list               N/A   node -&gt; stable (-&gt; N/A) (default)   iojs -&gt; N/A (default)</code> Podemos ahora instalar tantas versiones de node como queramos: <code>bash   usuario@ubuntu:~$ nvm install node   Downloading and installing node v9.4.0...   usuario@ubuntu:~$ nvm list   -&gt;       v9.4.0   default -&gt; node (-&gt; v9.4.0)   node -&gt; stable (-&gt; v9.4.0) (default)   stable -&gt; 9.4 (-&gt; v9.4.0) (default)   iojs -&gt; N/A (default)   lts/* -&gt; lts/carbon (-&gt; N/A)   lts/argon -&gt; v4.8.7 (-&gt; N/A)   lts/boron -&gt; v6.12.3 (-&gt; N/A)   lts/carbon -&gt; v8.9.4 (-&gt; N/A)</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~$ which nodejs</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="ex">/usr/bin/nodejs</span></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="ex">usuario@ubuntu</span>:~$ sudo ln -s /usr/bin/nodejs /usr/bin/node</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="ex">usuario@ubuntu</span>:~$ node --version</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="ex">v4.2.6</span></a></code></pre></div>
+<ul>
+<li><p>O mejor aún instale primero <a href="https://github.com/creationix/nvm">nvm</a> y luego instale Node.js. nvm es como rvm para NodeJS: Te permite tener varias instalaciones de node y cambiar entre versión y versión</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh <span class="kw">|</span> <span class="fu">bash</span></a></code></pre></div>
+<p>El script clona el repositorio de nvm a <code>~/.nvm</code> y añade líneas a nuestro script de arranque de perfil (<code>~/.bash_profile</code>, <code>~/.zshrc</code>, <code>~/.profile</code>, or <code>~/.bashrc</code>). Es por eso que tenemos que rearrancar la terminal:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~$ command -V nvm</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="ex">-bash</span>: command: nvm: no se encontró</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="ex">usuario@ubuntu</span>:~$ bash</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="ex">usuario@ubuntu</span>:~$ nvm list</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">            <span class="ex">N/A</span></a>
+<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="ex">node</span> -<span class="op">&gt;</span> stable (-<span class="op">&gt;</span> N/A) <span class="kw">(</span><span class="ex">default</span><span class="kw">)</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="ex">iojs</span> -<span class="op">&gt;</span> N/A (default)</a></code></pre></div>
+<p>Podemos ahora instalar tantas versiones de node como queramos:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~$ nvm install node</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="ex">Downloading</span> and installing node v9.4.0...</a>
+<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="ex">usuario@ubuntu</span>:~$ nvm list</a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="ex">-</span><span class="op">&gt;</span>       v9.4.0</a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="ex">default</span> -<span class="op">&gt;</span> node (-<span class="op">&gt;</span> v9.4.0)</a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="ex">node</span> -<span class="op">&gt;</span> stable (-<span class="op">&gt;</span> v9.4.0) <span class="kw">(</span><span class="ex">default</span><span class="kw">)</span></a>
+<a class="sourceLine" id="cb13-7" data-line-number="7"><span class="ex">stable</span> -<span class="op">&gt;</span> 9.4 (-<span class="op">&gt;</span> v9.4.0) <span class="kw">(</span><span class="ex">default</span><span class="kw">)</span></a>
+<a class="sourceLine" id="cb13-8" data-line-number="8"><span class="ex">iojs</span> -<span class="op">&gt;</span> N/A (default)</a>
+<a class="sourceLine" id="cb13-9" data-line-number="9"><span class="ex">lts/*</span> -<span class="op">&gt;</span> lts/carbon (-<span class="op">&gt;</span> N/A)</a>
+<a class="sourceLine" id="cb13-10" data-line-number="10"><span class="ex">lts/argon</span> -<span class="op">&gt;</span> v4.8.7 (-<span class="op">&gt;</span> N/A)</a>
+<a class="sourceLine" id="cb13-11" data-line-number="11"><span class="ex">lts/boron</span> -<span class="op">&gt;</span> v6.12.3 (-<span class="op">&gt;</span> N/A)</a>
+<a class="sourceLine" id="cb13-12" data-line-number="12"><span class="ex">lts/carbon</span> -<span class="op">&gt;</span> v8.9.4 (-<span class="op">&gt;</span> N/A)</a></code></pre></div></li>
+<li><p><a href="https://github.com/rvm/ubuntu_rvm">rvm</a></p></li>
+</ul>
 <h2 id="configure-el-cliente-ssh-para-trabajar-con-github">Configure el cliente ssh para trabajar con GitHub</h2>
 <ul>
 <li><p>Recuerde poner sus claves privadas de GitHub en <code>.ssh</code> para poder trabajar con sus repos</p></li>
-<li><p>Actualice <code>~/.ssh/config</code> de manera apropiada:</p>
-<pre><code>    usuario@SYTW:~/src/sytw$ cat ~/.ssh/config
-    Host github.com
-    HostName github.com
-    user git
-    IdentityFile /home/usuario/.ssh/miclaveparagithub</code></pre></li>
+<li><p>Actualice <code>~/.ssh/config</code> de manera apropiada:</p></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~/.ssh$ ssh-keygen -tdsa</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="ex">...</span></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="ex">usuario@ubuntu</span>:~/src/pl$ vi ~/.ssh/config</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="ex">...</span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="ex">usuario@SYTW</span>:~/src/sytw$ cat ~/.ssh/config</a>
+<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="ex">Host</span> github.com</a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="ex">HostName</span> github.com</a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="ex">user</span> git</a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="ex">IdentityFile</span> /home/usuario/.ssh/miclaveparagithub</a></code></pre></div>
+<ul>
+<li><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">Adding a new SSH key to your GitHub account</a></li>
 </ul>
 <h2 id="desplegando-una-aplicación-web-en-su-máquina-del-iaas">Desplegando una aplicación Web en su máquina del iaas</h2>
 <ul>
 <li><p>Cree un directorio de trabajo:</p>
-<pre><code>  usuario@SYTW:~$ mkdir src
-  usuario@SYTW:~$ cd src
-  usuario@SYTW:~/src$ mkdir sytw
-  usuario@SYTW:~/src$ cd sytw/</code></pre></li>
+<pre><code>    usuario@SYTW:~$ mkdir src
+    usuario@SYTW:~$ cd src
+    usuario@SYTW:~/src$ mkdir sytw
+    usuario@SYTW:~/src$ cd sytw/</code></pre></li>
 <li><p>Clone un repo con una aplicación Web de prueba. Por ejemplo <a href="https://github.com/crguezl/express-start">crguezl/express-start</a>:</p>
-<pre><code>  usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
-  Clonar en «express-start»...
-  Warning: Permanently added the RSA host key for IP address &#39;555.55.555.555&#39;
-           to the list of known hosts.
-  remote: Counting objects: 87, done.
-  remote: Total 87 (delta 0), reused 0 (delta 0), pack-reused 87
-  Receiving objects: 100% (87/87), 66.93 KiB | 0 bytes/s, done.
-  Resolving deltas: 100% (41/41), done.
-  Checking connectivity... hecho.</code></pre></li>
+<pre><code>    usuario@ubuntu:~/src/PL$ git clone git@github.com:crguezl/express-start.git
+    Cloning into &#39;express-start&#39;...
+    The authenticity of host &#39;github.com (192.30.253.112)&#39; can&#39;t be established.
+    RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+    Are you sure you want to continue connecting (yes/no)? yes
+    Warning: Permanently added &#39;github.com,192.30.253.112&#39; (RSA) to the list of known hosts.
+    Permission denied (publickey).
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.</code></pre>
+<p>Tienes que añadir una clave a github para poder conectarte. (en GitHub settings&gt;SSH and GPG Keys&gt;new SSH key). Una vez hecho:</p>
+<pre><code>    usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
+    Clonar en «express-start»...
+    Warning: Permanently added the RSA host key for IP address &#39;555.55.555.555&#39;
+             to the list of known hosts.
+    remote: Counting objects: 87, done.
+    remote: Total 87 (delta 0), reused 0 (delta 0), pack-reused 87
+    Receiving objects: 100% (87/87), 66.93 KiB | 0 bytes/s, done.
+    Resolving deltas: 100% (41/41), done.
+    Checking connectivity... hecho.</code></pre></li>
 <li><p>Este es el contenido de la aplicación de ejemplo <a href="https://github.com/crguezl/express-start/blob/master/hello/hello.js">hello.js</a>:</p></li>
 </ul>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@SYTW</span>:~/src/sytw/express-start$ cd hello/
-
-<span class="kw">usuario@SYTW</span>:~/src/sytw/express-start/hello$ vi hello.js
-<span class="kw">usuario@SYTW</span>:~/src/sytw/express-start/hello$ <span class="co"># cambiamos port de escucha a 80</span>
-
-<span class="kw">usuario@SYTW</span>:~/src/sytw/express-start/hello$ cat hello.js</code></pre>
-<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> express = <span class="fu">require</span>(<span class="st">&#39;express&#39;</span>)
-<span class="kw">var</span> app = <span class="fu">express</span>()
-<span class="kw">var</span> path = <span class="fu">require</span>(<span class="st">&#39;path&#39;</span>);
-
-<span class="co">// view engine setup</span>
-<span class="ot">app</span>.<span class="fu">set</span>(<span class="st">&#39;views&#39;</span>, <span class="ot">path</span>.<span class="fu">join</span>(__dirname, <span class="st">&#39;views&#39;</span>));
-<span class="ot">app</span>.<span class="fu">set</span>(<span class="st">&#39;view engine&#39;</span>, <span class="st">&#39;ejs&#39;</span>);
-
-<span class="ot">app</span>.<span class="fu">use</span>(<span class="ot">express</span>.<span class="fu">static</span>(<span class="st">&#39;public&#39;</span>));
-
-<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/&#39;</span>, <span class="kw">function</span> (req, res) {
-  <span class="co">//res.send(&#39;Hello World!&#39;)</span>
-  <span class="ot">res</span>.<span class="fu">render</span>(<span class="st">&#39;index&#39;</span>, { <span class="dt">title</span>: <span class="st">&#39;Express&#39;</span> });
-})
-
-<span class="co">/*</span>
-<span class="co"> var router = express.Router();</span>
-<span class="co">  module.exports = router;</span>
-<span class="co">*/</span>
-<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/chuchu&#39;</span>, <span class="kw">function</span> (req, res) {
-  <span class="co">//res.send(&#39;Hello Chuchu!&#39;)</span>
-  <span class="ot">res</span>.<span class="fu">render</span>(<span class="st">&#39;index&#39;</span>, { <span class="dt">title</span>: <span class="st">&#39;Chuchu&#39;</span> });
-})
-
-<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/cat&#39;</span>, <span class="kw">function</span> (req, res) {
-  <span class="ot">res</span>.<span class="fu">send</span>(<span class="st">&#39;Got a GET request&#39;</span>+
-    <span class="st">&#39;&lt;br/&gt;&lt;img src=&quot;kitten.jpg&quot; /&gt;&#39;</span>
-  );
-})
-
-<span class="ot">app</span>.<span class="fu">get</span>(<span class="st">&#39;/dog&#39;</span>, <span class="kw">function</span> (req, res) {
-  <span class="ot">res</span>.<span class="fu">sendFile</span>(<span class="ot">path</span>.<span class="fu">join</span>(__dirname, <span class="st">&#39;public/dog.jpg&#39;</span>));
-});
-
-<span class="kw">var</span> server = <span class="ot">app</span>.<span class="fu">listen</span>(<span class="dv">8080</span>, <span class="kw">function</span> () {
-
-  <span class="kw">var</span> host = <span class="ot">server</span>.<span class="fu">address</span>().<span class="fu">address</span>
-  <span class="kw">var</span> port = <span class="ot">server</span>.<span class="fu">address</span>().<span class="fu">port</span>
-
-  <span class="ot">console</span>.<span class="fu">log</span>(<span class="st">&#39;Example app listening at http://%s:%s&#39;</span>, host, port)
-
-})</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="ex">usuario@SYTW</span>:~/src/sytw$ cd express-start/</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="ex">usuario@SYTW</span>:~/src/sytw/express-start$ cd hello/</a>
+<a class="sourceLine" id="cb18-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb18-4" data-line-number="4"><span class="ex">usuario@SYTW</span>:~/src/sytw/express-start/hello$ vi hello.js</a>
+<a class="sourceLine" id="cb18-5" data-line-number="5"><span class="ex">usuario@SYTW</span>:~/src/sytw/express-start/hello$ <span class="co"># cambiamos port de escucha a 80</span></a>
+<a class="sourceLine" id="cb18-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb18-7" data-line-number="7"><span class="ex">usuario@SYTW</span>:~/src/sytw/express-start/hello$ cat hello.js</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">var</span> express <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;express&#39;</span>)</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="kw">var</span> app <span class="op">=</span> <span class="at">express</span>()</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3"><span class="kw">var</span> path <span class="op">=</span> <span class="at">require</span>(<span class="st">&#39;path&#39;</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb19-5" data-line-number="5"><span class="co">// view engine setup</span></a>
+<a class="sourceLine" id="cb19-6" data-line-number="6"><span class="va">app</span>.<span class="at">set</span>(<span class="st">&#39;views&#39;</span><span class="op">,</span> <span class="va">path</span>.<span class="at">join</span>(__dirname<span class="op">,</span> <span class="st">&#39;views&#39;</span>))<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-7" data-line-number="7"><span class="va">app</span>.<span class="at">set</span>(<span class="st">&#39;view engine&#39;</span><span class="op">,</span> <span class="st">&#39;ejs&#39;</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb19-9" data-line-number="9"><span class="va">app</span>.<span class="at">use</span>(<span class="va">express</span>.<span class="at">static</span>(<span class="st">&#39;public&#39;</span>))<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb19-11" data-line-number="11"><span class="va">app</span>.<span class="at">get</span>(<span class="st">&#39;/&#39;</span><span class="op">,</span> <span class="kw">function</span> (req<span class="op">,</span> res) <span class="op">{</span></a>
+<a class="sourceLine" id="cb19-12" data-line-number="12">  <span class="co">//res.send(&#39;Hello World!&#39;)</span></a>
+<a class="sourceLine" id="cb19-13" data-line-number="13">  <span class="va">res</span>.<span class="at">render</span>(<span class="st">&#39;index&#39;</span><span class="op">,</span> <span class="op">{</span> <span class="dt">title</span><span class="op">:</span> <span class="st">&#39;Express&#39;</span> <span class="op">}</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-14" data-line-number="14"><span class="op">}</span>)</a>
+<a class="sourceLine" id="cb19-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb19-16" data-line-number="16"><span class="co">/*</span></a>
+<a class="sourceLine" id="cb19-17" data-line-number="17"><span class="co"> var router = express.Router();</span></a>
+<a class="sourceLine" id="cb19-18" data-line-number="18"><span class="co">  module.exports = router;</span></a>
+<a class="sourceLine" id="cb19-19" data-line-number="19"><span class="co">*/</span></a>
+<a class="sourceLine" id="cb19-20" data-line-number="20"><span class="va">app</span>.<span class="at">get</span>(<span class="st">&#39;/chuchu&#39;</span><span class="op">,</span> <span class="kw">function</span> (req<span class="op">,</span> res) <span class="op">{</span></a>
+<a class="sourceLine" id="cb19-21" data-line-number="21">  <span class="co">//res.send(&#39;Hello Chuchu!&#39;)</span></a>
+<a class="sourceLine" id="cb19-22" data-line-number="22">  <span class="va">res</span>.<span class="at">render</span>(<span class="st">&#39;index&#39;</span><span class="op">,</span> <span class="op">{</span> <span class="dt">title</span><span class="op">:</span> <span class="st">&#39;Chuchu&#39;</span> <span class="op">}</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-23" data-line-number="23"><span class="op">}</span>)</a>
+<a class="sourceLine" id="cb19-24" data-line-number="24"></a>
+<a class="sourceLine" id="cb19-25" data-line-number="25"><span class="va">app</span>.<span class="at">get</span>(<span class="st">&#39;/cat&#39;</span><span class="op">,</span> <span class="kw">function</span> (req<span class="op">,</span> res) <span class="op">{</span></a>
+<a class="sourceLine" id="cb19-26" data-line-number="26">  <span class="va">res</span>.<span class="at">send</span>(<span class="st">&#39;Got a GET request&#39;</span><span class="op">+</span></a>
+<a class="sourceLine" id="cb19-27" data-line-number="27">    <span class="st">&#39;&lt;br/&gt;&lt;img src=&quot;kitten.jpg&quot; /&gt;&#39;</span></a>
+<a class="sourceLine" id="cb19-28" data-line-number="28">  )<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-29" data-line-number="29"><span class="op">}</span>)</a>
+<a class="sourceLine" id="cb19-30" data-line-number="30"></a>
+<a class="sourceLine" id="cb19-31" data-line-number="31"><span class="va">app</span>.<span class="at">get</span>(<span class="st">&#39;/dog&#39;</span><span class="op">,</span> <span class="kw">function</span> (req<span class="op">,</span> res) <span class="op">{</span></a>
+<a class="sourceLine" id="cb19-32" data-line-number="32">  <span class="va">res</span>.<span class="at">sendFile</span>(<span class="va">path</span>.<span class="at">join</span>(__dirname<span class="op">,</span> <span class="st">&#39;public/dog.jpg&#39;</span>))<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-33" data-line-number="33"><span class="op">}</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb19-34" data-line-number="34"></a>
+<a class="sourceLine" id="cb19-35" data-line-number="35"><span class="kw">var</span> server <span class="op">=</span> <span class="va">app</span>.<span class="at">listen</span>(<span class="dv">8080</span><span class="op">,</span> <span class="kw">function</span> () <span class="op">{</span></a>
+<a class="sourceLine" id="cb19-36" data-line-number="36"></a>
+<a class="sourceLine" id="cb19-37" data-line-number="37">  <span class="kw">var</span> host <span class="op">=</span> <span class="va">server</span>.<span class="at">address</span>().<span class="at">address</span></a>
+<a class="sourceLine" id="cb19-38" data-line-number="38">  <span class="kw">var</span> port <span class="op">=</span> <span class="va">server</span>.<span class="at">address</span>().<span class="at">port</span></a>
+<a class="sourceLine" id="cb19-39" data-line-number="39"></a>
+<a class="sourceLine" id="cb19-40" data-line-number="40">  <span class="va">console</span>.<span class="at">log</span>(<span class="st">&#39;Example app listening at http://%s:%s&#39;</span><span class="op">,</span> host<span class="op">,</span> port)</a>
+<a class="sourceLine" id="cb19-41" data-line-number="41"></a>
+<a class="sourceLine" id="cb19-42" data-line-number="42"><span class="op">}</span>)</a></code></pre></div>
 <h3 id="instalando-dependencias">Instalando dependencias</h3>
 <ul>
 <li><p>Instalamos las dependencias:</p>
-<pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ npm install
-    npm WARN package.json hello@0.0.0 No description
-    npm WARN package.json hello@0.0.0 No repository field.
-    ...</code></pre></li>
+<pre><code>      usuario@SYTW:~/src/sytw/express-start/hello$ npm install
+      npm WARN package.json hello@0.0.0 No description
+      npm WARN package.json hello@0.0.0 No repository field.
+      ...</code></pre></li>
 </ul>
 <h3 id="ejecución-de-un-servicio">Ejecución de un servicio</h3>
 <ul>
-<li><p>Ejecutamos (El <code>sudo</code> es necesario porque estamos usando el puerto 80):</p>
-<pre><code>    usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js
-    Example app listening at http://0.0.0.0:80</code></pre></li>
-<li><p>Usamos el comando unix <a href="http://linux.101hacks.com/unix/nohup-command/"><code>nohup</code></a> si queremos evitar que el programa termine cuando hagas logout</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">usuario@ubuntu</span>:~/src/express-start/hello$ nohup sudo -b node hello.js</code></pre>
-<p>La opción <code>-b</code> de <a href="https://www.sudo.ws/man/1.8.13/sudo.man.html"><code>sudo</code></a> ejecuta el comando en background. Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.</p></li>
+<li>Ejecutamos (El <code>sudo</code> es necesario porque estamos usando el puerto 80):</li>
 </ul>
-<h3 id="vistando-la-aplicación">Vistando la Aplicación</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~/src/pl/express-start/hello$ which node</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2"><span class="ex">/home/usuario/.nvm/versions/node/v9.4.0/bin/node</span></a>
+<a class="sourceLine" id="cb21-3" data-line-number="3"><span class="ex">usuario@ubuntu</span>:~/src/pl/express-start/hello$ sudo /home/usuario/.nvm/versions/node/v9.4.0/bin/node hello.js</a>
+<a class="sourceLine" id="cb21-4" data-line-number="4"><span class="ex">Example</span> app listening at http://:::80</a></code></pre></div>
+<ul>
+<li>Usamos el comando unix <a href="http://linux.101hacks.com/unix/nohup-command/"><code>nohup</code></a> si queremos evitar que el programa termine cuando hagas logout</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="ex">usuario@ubuntu</span>:~/src/express-start/hello$ nohup sudo -b node hello.js</a></code></pre></div>
+<p>La opción <code>-b</code> de <a href="https://www.sudo.ws/man/1.8.13/sudo.man.html"><code>sudo</code></a> ejecuta el comando en background. Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.</p>
+<h3 id="visitando-la-aplicación">Visitando la Aplicación</h3>
 <ul>
 <li>A continuación visitamos la página con el navegador usando la URL con la IP:</li>
 </ul>
-<div class="figure">
-<img src="browser.png" alt="Visitando con el navegador la página" /><p class="caption">Visitando con el navegador la página</p>
-</div>
+<figure>
+<img src="browser.png" alt="Visitando con el navegador la página" /><figcaption>Visitando con el navegador la página</figcaption>
+</figure>
 <h1 id="referencias">Referencias</h1>
 <ul>
 <li><p>El tutorial <a href="https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html">SERVICIO IAAS de la ULL</a></p></li>
 <li><p>Véase <a href="https://sytw.github.io/iaas-ull-es/index.html">este documento como HTML</a></p></li>
 <li><p>Véase este <a href="https://github.com/SYTW/iaas-ull-es">repo en GitHub</a></p></li>
-<li>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">&quot;Manual de administración de Pools de máquinas&quot;</a>.</li>
+<li>Lea el documento <a href="manualDeAdministracionDelPoolsDeMaquinas.pdf">“Manual de administración de Pools de máquinas”</a>.</li>
 <li><p>Tutorial sobre como usar el <a href="https://usuarios.ull.es/vpn/">Servicio VPN de la ULL</a></p></li>
 </ul>
 </body>
