@@ -187,6 +187,7 @@ apt-get install git
   lts/boron -> v6.12.3 (-> N/A)
   lts/carbon -> v8.9.4 (-> N/A)
   ```
+* [rvm](https://github.com/rvm/ubuntu_rvm)
 
 ## Configure el cliente ssh para trabajar con GitHub
 
@@ -194,11 +195,19 @@ apt-get install git
 
 * Actualice `~/.ssh/config` de manera apropiada:
 
-            usuario@SYTW:~/src/sytw$ cat ~/.ssh/config
-            Host github.com
-            HostName github.com
-            user git
-            IdentityFile /home/usuario/.ssh/miclaveparagithub
+```bash
+usuario@ubuntu:~/.ssh$ ssh-keygen -tdsa
+...
+usuario@ubuntu:~/src/pl$ vi ~/.ssh/config
+...
+usuario@SYTW:~/src/sytw$ cat ~/.ssh/config
+Host github.com
+HostName github.com
+user git
+IdentityFile /home/usuario/.ssh/miclaveparagithub
+```
+
+* [Adding a new SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 ## Desplegando una aplicación Web en su máquina del iaas
 
@@ -210,6 +219,20 @@ apt-get install git
           usuario@SYTW:~/src$ cd sytw/
 
 * Clone un repo con una aplicación Web de prueba. Por ejemplo [crguezl/express-start](https://github.com/crguezl/express-start):
+
+          usuario@ubuntu:~/src/PL$ git clone git@github.com:crguezl/express-start.git
+          Cloning into 'express-start'...
+          The authenticity of host 'github.com (192.30.253.112)' can't be established.
+          RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+          Are you sure you want to continue connecting (yes/no)? yes
+          Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+          Permission denied (publickey).
+          fatal: Could not read from remote repository.
+
+          Please make sure you have the correct access rights
+          and the repository exists.
+
+  Tienes que añadir una clave a github para poder conectarte. (en GitHub settings>SSH and GPG Keys>new SSH key). Una vez hecho:
 
           usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
           Clonar en «express-start»...
@@ -224,6 +247,7 @@ apt-get install git
 * Este es el contenido de la aplicación de ejemplo [hello.js](https://github.com/crguezl/express-start/blob/master/hello/hello.js):
 
 ```bash
+usuario@SYTW:~/src/sytw$ cd express-start/
 usuario@SYTW:~/src/sytw/express-start$ cd hello/
 
 usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
@@ -290,8 +314,12 @@ var server = app.listen(8080, function () {
 
 * Ejecutamos (El `sudo` es necesario porque estamos usando el puerto 80):
 
-            usuario@SYTW:~/src/sytw/express-start/hello$ sudo nodejs hello.js
-            Example app listening at http://0.0.0.0:80
+```bash
+usuario@ubuntu:~/src/pl/express-start/hello$ which node
+/home/usuario/.nvm/versions/node/v9.4.0/bin/node
+usuario@ubuntu:~/src/pl/express-start/hello$ sudo /home/usuario/.nvm/versions/node/v9.4.0/bin/node hello.js
+Example app listening at http://:::80
+```
 
 * Usamos el comando unix [`nohup`](http://linux.101hacks.com/unix/nohup-command/)
 si queremos evitar que el programa termine cuando hagas logout
@@ -301,7 +329,7 @@ usuario@ubuntu:~/src/express-start/hello$ nohup sudo -b node hello.js
 La opción `-b` de [`sudo`](https://www.sudo.ws/man/1.8.13/sudo.man.html) ejecuta el comando en background.
 Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 
-### Vistando la Aplicación
+### Visitando la Aplicación
 
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
