@@ -1,7 +1,22 @@
 # Como Desplegar una Aplicación Web en [iaas.ull.es](https://iaas.ull.es)
 
+## Acceso al servicio
+
 Para acceder al servicio, todos los usuarios (tanto los responsables como los usuarios
 finales) accederán a [https://iaas.ull.es](https://iaas.ull.es), donde seleccionarán la opción **Portal del usuario**.
+
+## Panel [https://iaas.ull.es/mismaquinas](https://iaas.ull.es/mismaquinas)
+
+En 2018 el STIC ha desplegado un panel accesible en [1], que permite listar las máquinas que son propiedad o que tienen permisos de uso por parte del usuario que se autentica. Tras autenticarse, a dicho usuario le aparecerán las máquinas a las que tiene acceso, conjuntamente con algunos datos, como su estado (encendida, apagada...), el sistema operativo y especialmente las IPs de las tarjetas de red.
+
+Esto sirve para que los usuarios no tengan que entrar al panel de IaaS, conectarse a la máquina virtual y ejecutar algún comando para ver la IP de la máquina para posteriormente conectarse por SSH. Ahora ya les aparecerá en el panel y pueden saber la IP directamente.
+
+Toda esta información ha sido actualizada ya en los documentos correspondientes ([2], [3], [4]). 
+
+1. [https://iaas.ull.es/mismaquinas](https://iaas.ull.es/mismaquinas)
+2. [https://goo.gl/tAF4am](https://goo.gl/tAF4am)
+3. [https://goo.gl/noagxg](https://goo.gl/noagxg)
+4. [https://goo.gl/D6Sw7L](https://goo.gl/D6Sw7L)
 
 ## Recuerde estar autenticado en la ULL
 
