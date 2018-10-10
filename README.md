@@ -95,6 +95,8 @@ eth0      Link encaa:Ethernet  direcciónHW aa:aa:aa:aa:aa:aa
 $ ssh 55.5.555.55
 ```
 
+Véase la sección incidencia en Octubre de 2018
+
 ## Conectarse desde fuera de la ULL: VPN ULL
 
 Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
