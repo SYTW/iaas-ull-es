@@ -11,7 +11,7 @@ En 2018 el STIC ha desplegado un panel accesible en [1], que permite listar las 
 
 Esto sirve para que los usuarios no tengan que entrar al panel de IaaS, conectarse a la máquina virtual y ejecutar algún comando para ver la IP de la máquina para posteriormente conectarse por SSH. Ahora ya les aparecerá en el panel y pueden saber la IP directamente.
 
-Toda esta información ha sido actualizada ya en los documentos correspondientes ([2], [3], [4]). 
+Toda esta información ha sido actualizada ya en los documentos correspondientes ([2], [3], [4]).
 
 1. [https://iaas.ull.es/mismaquinas](https://iaas.ull.es/mismaquinas)
 2. [https://goo.gl/tAF4am](https://goo.gl/tAF4am)
@@ -21,6 +21,23 @@ Toda esta información ha sido actualizada ya en los documentos correspondientes
 ## Recuerde estar autenticado en la ULL
 
 Recuerde que dentro de la ULL deberá haber **entrado previamente a [https://acceso.ull.es](https://acceso.ull.es)**, esto es estar autenticado como miembro de la ULL  y desde fuera de la ULL usando la VPN de la ULL
+
+## Incidencia en Octubre de 2018
+
+> **¡La IP que aparece en el panel no es la correcta!** Esto es un problema que tienen las Ubuntu 18, y es que
+cuando renueva los leases DHCP al parecer no quita las IPs anteriores, con lo
+cual las IPs se duplican y varias máquinas tienen la misma IP.
+
+**La solución**:
+En la interfaz web deben escribir:
+
+      sudo netplan apply
+
+y después
+
+      ip a
+
+para saber la IP correcta
 
 ## Acceso a https://iaas.ull.es
 
