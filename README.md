@@ -274,8 +274,10 @@ IdentityFile /home/usuario/.ssh/miclaveparagithub
 
 ## Desplegando una aplicación Web en su máquina del iaas
 
-* ¿Ni idea de como funciona una aplicación web? Estudia este vídeo en YouTube:
+* ¿Ni idea de como funciona el protocolo HTTP web? Estudia estos vídeos en YouTube:
    - [Basic concepts of web applications, how they work and the HTTP protocol](https://youtu.be/RsQ1tFLwldY) 
+   - [Know about HTTP URL](https://youtu.be/ADQ_rhefgEk)
+   - [Understanding HTTP Request Response Messages](https://youtu.be/sxiRFwQ1RJ4)
 * Cree un directorio de trabajo:
 
           usuario@SYTW:~$ mkdir src
@@ -309,7 +311,7 @@ IdentityFile /home/usuario/.ssh/miclaveparagithub
           Resolving deltas: 100% (41/41), done.
           Checking connectivity... hecho.
 
-* Este es el contenido de la aplicación de ejemplo [hello.js](https://github.com/crguezl/express-start/blob/master/hello/hello.js):
+* Este es el contenido de la aplicación de ejemplo [hello/hello.js](https://github.com/crguezl/express-start/blob/master/hello/hello.js):
 
 ```bash
 usuario@SYTW:~/src/sytw$ cd express-start/
