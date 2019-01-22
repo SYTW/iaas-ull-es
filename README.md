@@ -412,7 +412,7 @@ Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 * El tutorial [SERVICIO IAAS de la ULL](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html)
 * Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
 * Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
-* <a href="https://goo.gl/tAF4am" target='_blank'>Manual de uso de pools de máquinas</a>
-* <a href="https://goo.gl/noagxg" target='_blank'>Manual de uso de pools de recursos</a>
-* <a href="https://goo.gl/D6Sw7L" target='_blank'>Manual de uso de máquinas puntuales</a>
+* <a href="https://goo.gl/tAF4am" target="_blank">Manual de uso de pools de máquinas</a>
+* <a href="https://goo.gl/noagxg" target="_blank">Manual de uso de pools de recursos</a>
+* <a href="https://goo.gl/D6Sw7L" target="_blank">Manual de uso de máquinas puntuales</a>
 * Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
