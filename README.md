@@ -124,6 +124,7 @@ $ ssh 55.5.555.55
 ```
 
 Véase la sección incidencia en Octubre de 2018
+<<<<<<< HEAD
 
 ## Conectarse desde fuera de la ULL: VPN ULL
 
@@ -133,6 +134,17 @@ Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn
 
 1. Genere una clave rsa en su portátil (limitación en 2018: tiene que ser rsa)
 
+=======
+
+## Conectarse desde fuera de la ULL: VPN ULL
+
+Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
+
+## Configure la ssh de su portátil/desktop para acceder a su máquina del iaas
+
+1. Genere una clave rsa en su portátil (limitación en 2018: tiene que ser rsa)
+
+>>>>>>> gh-pages
 ```bash
 ~/.ssh(master)]$ ssh-keygen -trsa
 Generating public/private rsa key pair.
@@ -314,10 +326,8 @@ IdentityFile /home/usuario/.ssh/miclaveparagithub
 ```bash
 usuario@SYTW:~/src/sytw$ cd express-start/
 usuario@SYTW:~/src/sytw/express-start$ cd hello/
-
 usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
 usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
-
 usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
 ```
 
@@ -399,3 +409,14 @@ Ahora podemos salir de la cuenta y el servicio continúa ejecutandose.
 * A continuación visitamos la página con el navegador usando la URL con la IP:
 
 ![Visitando con el navegador la página](browser.png)
+
+# Referencias
+
+* El tutorial [SERVICIO IAAS de la ULL](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/recursos/iaas.html)
+
+* Véase [este documento como HTML](https://sytw.github.io/iaas-ull-es/index.html)
+
+* Véase este [repo en GitHub](https://github.com/SYTW/iaas-ull-es)
+
+* Lea el documento ["Manual de administración de Pools de máquinas"](manualDeAdministracionDelPoolsDeMaquinas.pdf).
+* Tutorial sobre como usar el [Servicio VPN de la ULL](https://usuarios.ull.es/vpn/)
