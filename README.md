@@ -373,6 +373,9 @@ usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
 usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
 ```
 
+* ¿Ni idea de como funciona express.js? Sigue este tutorial:
+    - [Express/Node introduction](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction) en developer.mozilla.com
+
 ### Instalando dependencias
 
 * Instalamos las dependencias:
