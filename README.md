@@ -315,15 +315,6 @@ IdentityFile /home/usuario/.ssh/miclaveparagithub
 
 * Este es el contenido de la aplicación de ejemplo [hello/hello.js](https://github.com/crguezl/express-start/blob/master/hello/hello.js):
 
-```bash
-usuario@SYTW:~/src/sytw$ cd express-start/
-usuario@SYTW:~/src/sytw/express-start$ cd hello/
-
-usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
-usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
-
-usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
-```
 
 ```javascript
 var express = require('express')
@@ -368,6 +359,18 @@ var server = app.listen(8080, function () {
   console.log('Example app listening at http://%s:%s', host, port)
 
 })
+```
+
+Cambiamos port de escucha a 80:
+
+```bash
+usuario@SYTW:~/src/sytw$ cd express-start/
+usuario@SYTW:~/src/sytw/express-start$ cd hello/
+
+usuario@SYTW:~/src/sytw/express-start/hello$ vi hello.js
+usuario@SYTW:~/src/sytw/express-start/hello$ # cambiamos port de escucha a 80
+
+usuario@SYTW:~/src/sytw/express-start/hello$ cat hello.js
 ```
 
 ### Instalando dependencias
