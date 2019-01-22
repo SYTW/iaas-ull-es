@@ -29,6 +29,7 @@ cuando renueva los leases DHCP al parecer no quita las IPs anteriores, con lo
 cual las IPs se duplican y varias máquinas tienen la misma IP.
 
 **La solución**:
+
 En la interfaz web deben escribir:
 
       sudo netplan apply
@@ -135,7 +136,6 @@ usuario@ubuntu:~/.ssh$ vi authorized_keys
 añada los contenidos de `miclave.pub`
 
 
-#
 ## Puertos abiertos en las Máquinas Virtuales
 
 * Creo que ahora mismo las Máquinas Virtuales vienen con estos puertos abiertos:
