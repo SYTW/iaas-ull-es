@@ -299,7 +299,9 @@ IdentityFile /home/usuario/.ssh/miclaveparagithub
           Please make sure you have the correct access rights
           and the repository exists.
 
-  Tienes que añadir una clave a github para poder conectarte. (en GitHub settings>SSH and GPG Keys>new SSH key). Una vez hecho:
+  Tienes que añadir una clave a github para poder conectarte.
+  En GitHub `settings>SSH and GPG Keys>new SSH key`.
+  Una vez hecho:
 
           usuario@SYTW:~/src/sytw$ git clone git@github.com:crguezl/express-start.git
           Clonar en «express-start»...
