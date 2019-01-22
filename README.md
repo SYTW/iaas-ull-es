@@ -211,6 +211,8 @@ IdentityFile /home/usuario/.ssh/miclaveparagithub
 
 ## Desplegando una aplicación Web en su máquina del iaas
 
+* ¿Ni idea de como funciona una aplicación web? Estudia este vídeo en YouTube:
+   - [Basic concepts of web applications, how they work and the HTTP protocol](https://youtu.be/RsQ1tFLwldY) 
 * Cree un directorio de trabajo:
 
           usuario@SYTW:~$ mkdir src
